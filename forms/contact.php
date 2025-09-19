@@ -7,7 +7,7 @@
   */
 
   // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+  $receiving_email_address = 'contact@EnjazTec.com';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
@@ -18,10 +18,25 @@
   $contact = new PHP_Email_Form;
   $contact->ajax = true;
   
+  // Sanitize and validate inputs
+  $name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);
+  $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+  $subject = filter_var(trim($_POST['subject']), FILTER_SANITIZE_STRING);
+  $message = htmlspecialchars(trim($_POST['message']));
+
+  if (empty($name) || empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL) || empty($subject) || empty($message)) {
+    // Handle validation errors
+    // You can create a more specific error message if you want
+    die('Please fill all the fields and provide a valid email address.');
+  }
+
   $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+  $contact->from_name = $name;
+  $contact->from_email = $email;
+  $contact->subject = $subject;
+
+
+
 
   // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
   /*
@@ -33,10 +48,10 @@
   );
   */
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
+  $contact->add_message( $name, 'From');
+  $contact->add_message( $email, 'Email');
   isset($_POST['phone']) && $contact->add_message($_POST['phone'], 'Phone');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+  $contact->add_message( $message, 'Message', 10);
 
   echo $contact->send();
 ?>
