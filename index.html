@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Enjaz Tech Solutions | Home</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+
+  <!-- SEO Meta Tags -->
+  <title>إنجاز للحلول التقنية | شريكك للنجاح الرقمي</title>
+  <meta name="description" content="إنجاز للحلول التقنية تقدم خدمات تطوير الويب، تصميم المواقع، التسويق الرقمي، والحلول السحابية في الدمام والمملكة العربية السعودية. شريكك الموثوق للابتكار والنجاح.">
+  <meta name="keywords" content="تطوير مواقع, تصميم مواقع, تسويق رقمي, حلول تقنية, إنجاز, السعودية, الدمام, برمجة, استضافة">
+  <meta name="author" content="Enjaz Tec Solutions">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://EnjazTec.com/">
+  <meta property="og:title" content="إنجاز للحلول التقنية | شريكك للنجاح الرقمي">
+  <meta property="og:description" content="نقدم حلولاً تقنية متكاملة من تطوير وتصميم المواقع إلى التسويق الرقمي لضمان نجاح أعمالك.">
+  <meta property="og:image" content="https://EnjazTec.com/assets/img/logo.webp">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://EnjazTec.com/">
+  <meta property="twitter:title" content="إنجاز للحلول التقنية | شريكك للنجاح الرقمي">
+  <meta property="twitter:description" content="نقدم حلولاً تقنية متكاملة من تطوير وتصميم المواقع إلى التسويق الرقمي لضمان نجاح أعمالك.">
+  <meta property="twitter:image" content="https://EnjazTec.com/assets/img/logo.webp">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.ico" rel="icon">
@@ -15,18 +32,18 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cairo:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/rtl.css" rel="stylesheet">
 </head>
 
 <body class="index-page">
@@ -36,9 +53,9 @@
     <div class="topbar d-flex align-items-center dark-background">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a
-              href="mailto:contact@example.com">contact@EnjazTec.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+966562824104</span></i>
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@EnjazTec.com"
+              data-i18n="contact_email">contact@EnjazTec.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span data-i18n="contact_phone">+966562824104</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
           <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
@@ -60,14 +77,14 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
-
+            <li><a href="#hero" class="active" data-i18n="nav_home">Home</a></li>
+            <li><a href="#about" data-i18n="nav_about">عن الشركة</a></li>
+            <li><a href="#services" data-i18n="nav_services">Services</a></li>
+            <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+            <li><a href="#team" data-i18n="nav_team">Team</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
           </ul>
+          <a href="#" id="lang-switcher" class="btn-get-started" data-i18n="lang_switcher">English</a>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
@@ -90,51 +107,51 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <div class="hero-content">
-              <span class="hero-badge">Innovative Solutions</span>
-              <h1>Transform Your Business with Modern Technology</h1>
-              <p>We provide integrated technical solutions that ensure you have a professional digital presence and an
-                edge in the business world.</p>
-              <div class="hero-actions">
-                <a href="#services" class="btn-primary">Explore Services</a>
+            <div class="hero-content" data-aos="fade-up">
+              <span class="hero-badge" data-i18n="hero_badge">حلول ويب متكاملة</span>
+              <h1 data-i18n="hero_title" data-aos-delay="100">نطلق العنان لقوة الويب لنجاح أعمالك</h1>
+              <p data-i18n="hero_description" data-aos-delay="200">نحن نقدم حلول ويب متكاملة، من تطوير المواقع إلى التسويق الرقمي، لنضمن لك التميز والابتكار.
+              </p>
+              <div class="hero-actions" data-aos-delay="300">
+                <a href="#services" class="btn-primary" data-i18n="hero_button_explore">Explore Services</a>
               </div>
-              <div class="hero-stats">
+              <div class="hero-stats" data-aos-delay="400">
                 <div class="stat-item">
-                  <span class="stat-number">500+</span>
-                  <span class="stat-label">Projects Completed</span>
+                  <span class="stat-number" data-i18n="hero_stat_1_num">+500</span>
+                  <span class="stat-label" data-i18n="hero_stat_1_label">Projects Completed</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number">98%</span>
-                  <span class="stat-label">Client Satisfaction</span>
+                  <span class="stat-number" data-i18n="hero_stat_2_num">98%</span>
+                  <span class="stat-label" data-i18n="hero_stat_2_label">Client Satisfaction</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number">24/7</span>
-                  <span class="stat-label">Support Available</span>
+                  <span class="stat-number" data-i18n="hero_stat_3_num">+10</span>
+                  <span class="stat-label" data-i18n="hero_stat_3_label">سنوات من الخبرة</span>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="hero-visual">
+            <div class="hero-visual" data-aos="zoom-in" data-aos-delay="500">
               <div class="row g-3">
                 <div class="col-6">
                   <div class="feature-card">
                     <i class="bi bi-shield-check"></i>
-                    <span>Secure &amp; Reliable</span>
+                    <span data-i18n="hero_feature_1">Secure &amp; Reliable</span>
                   </div>
                   <div class="feature-card">
                     <i class="bi bi-people"></i>
-                    <span>Expert Team</span>
+                    <span data-i18n="hero_feature_2">Expert Team</span>
                   </div>
                 </div>
                 <div class="col-6">
                   <div class="feature-card">
                     <i class="bi bi-speedometer2"></i>
-                    <span>High Performance</span>
+                    <span data-i18n="hero_feature_3">High Performance</span>
                   </div>
                   <div class="feature-card">
                     <i class="bi bi-award"></i>
-                    <span>Award Winning</span>
+                    <span data-i18n="hero_feature_4">دعم فني متكامل</span>
                   </div>
                 </div>
               </div>
@@ -152,17 +169,17 @@
 
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <div class="content">
-              <h2>Transforming Ideas Into Reality</h2>
-              <p class="lead">At Enjaz Tech Solutions, we believe that success in this era starts with a strong and
-                professional digital presence. Therefore, we are a passionate team of innovators dedicated to creating
-                exceptional digital experiences that make your business a gateway to a world of unique opportunities.
+            <div class="content" data-aos="fade-up">
+              <h2 data-i18n="about_title">قصة نجاحنا</h2>
+              <p class="lead" data-i18n="about_lead" data-aos-delay="100">في إنجاز للحلول التقنية، نكرس جهودنا لتقديم حلول تقنية مبتكرة وخدمات متميزة في مجال تطوير الويب، خدمات البريد الإلكتروني، تصميم واجهات المستخدم، التسويق الرقمي، والحلول السحابية.
               </p>
-              <p>Our journey began with a simple vision: to bridge the gap between cutting-edge technology and
+              <p data-i18n="about_p1" data-aos-delay="200">Our journey began with a simple vision: to bridge the gap between cutting-edge
+                technology and
                 human-centered design. Today, we offer a comprehensive suite of technical services that ensure your
                 distinction, from reliable hosting and attractive designs to secure programming and effective digital
                 marketing.</p>
-              <p>Our team of experts combines passion with expertise to deliver innovative solutions that exceed your
+              <p data-i18n="about_p2" data-aos-delay="300">Our team of experts combines passion with expertise to deliver innovative
+                solutions that exceed your
                 expectations. Through collaborative partnerships, we have become a trusted partner who has helped
                 hundreds of companies achieve their goals, while building lasting relationships based on trust and
                 exceptional results.</p>
@@ -171,41 +188,41 @@
                 <div class="row">
                   <div class="col-md-4">
                     <div class="stat-item">
-                      <div class="number">8+</div>
-                      <div class="label">Years Experience</div>
+                      <div class="number" data-i18n="about_stat_1_num">+8</div>
+                      <div class="label" data-i18n="about_stat_1_label">Years Experience</div>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="stat-item">
-                      <div class="number">450+</div>
-                      <div class="label">Projects Completed</div>
+                      <div class="number" data-i18n="about_stat_2_num">+450</div>
+                      <div class="label" data-i18n="about_stat_2_label">Projects Completed</div>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="stat-item">
-                      <div class="number">25</div>
-                      <div class="label">Team Members</div>
+                      <div class="number" data-i18n="about_stat_3_num">25</div>
+                      <div class="label" data-i18n="about_stat_3_label">Team Members</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="cta-wrapper">
-                <a href="#portfolio" class="btn btn-primary">Discover Our Work</a>
-                <a href="#team" class="btn btn-outline">Meet Our Team</a>
+              <div class="cta-wrapper" data-aos-delay="400">
+                <a href="#portfolio" class="btn btn-primary" data-i18n="about_button_discover">Discover Our Work</a>
+                <a href="#team" class="btn btn-outline" data-i18n="about_button_meet_team">Meet Our Team</a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
             <div class="image-wrapper">
               <img src="assets/img/about/about-square-8.webp" alt="About Us" class="img-fluid main-image">
               <div class="floating-card">
                 <div class="card-content">
                   <i class="bi bi-award"></i>
                   <div class="text">
-                    <h5>Excellence Award</h5>
-                    <span>Digital Innovation 2023</span>
+                    <h5 data-i18n="about_award_title">Excellence Award</h5>
+                    <span data-i18n="about_award_subtitle">أفضل شركة تقنية 2024</span>
                   </div>
                 </div>
               </div>
@@ -341,28 +358,27 @@
     <section id="featured-services" class="featured-services section light-background">
 
       <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Featured Services</h2>
-        <p>Featured Srvices</p>
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-i18n="featured_services_title">خدماتنا الاحترافية</h2>
+        <p data-i18n="featured_services_subtitle">Featured Srvices</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-right">
             <div class="services-content" data-aos-duration="900">
-              <span class="subtitle">Professional Services</span>
-              <h2>Elevating Business Performance Through Strategic Solutions</h2>
-              <p data-aos-duration="800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent varius risus
-                sed pellentesque auctor. Phasellus gravida magna at tortor cursus, sit amet suscipit tortor malesuada.
+              <span class="subtitle" data-i18n="featured_services_badge">أحدث التقنيات</span>
+              <h2 data-i18n="featured_services_heading">حلول ويب متكاملة لتحقيق أهدافك</h2>
+              <p data-aos-duration="800" data-i18n="featured_services_description">نقدم مجموعة من الخدمات الاحترافية المصممة خصيصًا لتعزيز حضورك الرقمي، بدءًا من تطوير الويب وحتى استراتيجيات التسويق المبتكرة.
               </p>
               <div class="mt-4" data-aos-duration="1100">
-                <a href="#" class="btn-consultation"><span>Request a Consultation</span><i
-                    class="bi bi-arrow-right"></i></a>
+                <a href="#" class="btn-consultation"><span data-i18n="featured_services_button_consultation">Request a
+                    Consultation</span><i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
             <div class="services-image">
               <img src="assets/img/services/services-9.webp" alt="Business Services" class="img-fluid">
               <div class="shape-circle"></div>
@@ -371,7 +387,7 @@
           </div>
         </div>
 
-        <div class="row mt-5" data-aos-duration="1000">
+        <div class="row mt-5" data-aos="fade-up" data-aos-delay="200">
           <div class="col-12">
             <div class="services-slider swiper init-swiper">
               <script type="application/json" class="swiper-config">
@@ -409,9 +425,8 @@
                     </div>
                     <a href="#" class="arrow-link"><i class="bi bi-arrow-right"></i></a>
                     <div class="content">
-                      <h4><a href="#">Financial Strategy Development</a></h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras vehicula magna
-                        eget lectus varius, at finibus massa condimentum.</p>
+                      <h4><a href="#" data-i18n="featured_services_card_1_title">تطوير الويب المخصص</a></h4>
+                      <p data-i18n="featured_services_card_1_desc">نبني مواقع وتطبيقات ويب قوية وآمنة وقابلة للتطوير باستخدام أحدث التقنيات لتلبية متطلبات عملك الفريدة.</p>
                       <div class="service-number">01</div>
                     </div>
                   </div>
@@ -424,9 +439,8 @@
                     </div>
                     <a href="#" class="arrow-link"><i class="bi bi-arrow-right"></i></a>
                     <div class="content">
-                      <h4><a href="#">Market Expansion Advisory</a></h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras vehicula magna
-                        eget lectus varius, at finibus massa condimentum.</p>
+                      <h4><a href="#" data-i18n="featured_services_card_2_title">تصميم واجهات المستخدم (UI/UX)</a></h4>
+                      <p data-i18n="featured_services_card_2_desc">نصمم تجارب مستخدم بديهية وجذابة تضمن تفاعل جمهورك مع علامتك التجارية بسهولة وفعالية.</p>
                       <div class="service-number">02</div>
                     </div>
                   </div>
@@ -439,9 +453,8 @@
                     </div>
                     <a href="#" class="arrow-link"><i class="bi bi-arrow-right"></i></a>
                     <div class="content">
-                      <h4><a href="#">Risk Management Solutions</a></h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras vehicula magna
-                        eget lectus varius, at finibus massa condimentum.</p>
+                      <h4><a href="#" data-i18n="featured_services_card_3_title">خدمات البريد الإلكتروني للشركات</a></h4>
+                      <p data-i18n="featured_services_card_3_desc">نوفر حلول بريد إلكتروني احترافية وآمنة مع نطاق خاص بشركتك لتعزيز الموثوقية والتواصل الرسمي.</p>
                       <div class="service-number">03</div>
                     </div>
                   </div>
@@ -454,9 +467,8 @@
                     </div>
                     <a href="#" class="arrow-link"><i class="bi bi-arrow-right"></i></a>
                     <div class="content">
-                      <h4><a href="#">Innovation &amp; Digital Transformation</a></h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras vehicula magna
-                        eget lectus varius, at finibus massa condimentum.</p>
+                      <h4><a href="#" data-i18n="featured_services_card_4_title">التسويق الرقمي المتكامل</a></h4>
+                      <p data-i18n="featured_services_card_4_desc">نضع استراتيجيات تسويق رقمي شاملة، من تحسين محركات البحث (SEO) إلى إدارة الحملات الإعلانية، لزيادة وصولك.</p>
                       <div class="service-number">04</div>
                     </div>
                   </div>
@@ -469,9 +481,8 @@
                     </div>
                     <a href="#" class="arrow-link"><i class="bi bi-arrow-right"></i></a>
                     <div class="content">
-                      <h4><a href="#">Talent Management Strategy</a></h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras vehicula magna
-                        eget lectus varius, at finibus massa condimentum.</p>
+                      <h4><a href="#" data-i18n="featured_services_card_5_title">الحلول السحابية والاستضافة</a></h4>
+                      <p data-i18n="featured_services_card_5_desc">نقدم خدمات استضافة سحابية موثوقة وعالية الأداء لضمان سرعة وأمان موقعك الإلكتروني على مدار الساعة.</p>
                       <div class="service-number">05</div>
                     </div>
                   </div>
@@ -499,21 +510,22 @@
     <section id="how-we-work" class="how-we-work section">
 
       <!-- Section Title -->
-      <div class="container section-title">
-        <h2>How We Work</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-i18n="how_we_work_title">How We Work</h2>
+        <p data-i18n="how_we_work_subtitle">منهجيتنا في تحويل الأفكار إلى نجاحات ملموسة</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="steps-grid">
+        <div class="steps-grid" data-aos="fade-up" data-aos-delay="100">
           <div class="step-card">
             <div class="step-icon">
               <i class="bi bi-search"></i>
             </div>
-            <div class="step-number">Step 1</div>
-            <h3>Research &amp; Planning</h3>
-            <p>Nulla facilisi morbi tempus iaculis urna id. Vestibulum ante ipsum primis in faucibus orci luctus et
+            <div class="step-number" data-i18n="how_we_work_step_1_num">Step 1</div>
+            <h3 data-i18n="how_we_work_step_1_title">Research &amp; Planning</h3>
+            <p data-i18n="how_we_work_step_1_desc">نبدأ بفهم عميق لأهدافك وتحليل دقيق للسوق والمنافسين لوضع استراتيجية واضحة.
+              primis in faucibus orci luctus et
               ultrices posuere.</p>
             <div class="step-arrow">
               <i class="bi bi-arrow-right"></i>
@@ -524,9 +536,10 @@
             <div class="step-icon">
               <i class="bi bi-lightbulb"></i>
             </div>
-            <div class="step-number">Step 2</div>
-            <h3>Creative Solutions</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+            <div class="step-number" data-i18n="how_we_work_step_2_num">Step 2</div>
+            <h3 data-i18n="how_we_work_step_2_title">Creative Solutions</h3>
+            <p data-i18n="how_we_work_step_2_desc">نصمم واجهات مستخدم جذابة وتجارب فريدة تعكس هوية علامتك التجارية وتلبي احتياجات جمهورك.
+              accusantium doloremque laudantium, totam
               rem aperiam.</p>
             <div class="step-arrow">
               <i class="bi bi-arrow-right"></i>
@@ -537,9 +550,10 @@
             <div class="step-icon">
               <i class="bi bi-gear"></i>
             </div>
-            <div class="step-number">Step 3</div>
-            <h3>Development</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            <div class="step-number" data-i18n="how_we_work_step_3_num">Step 3</div>
+            <h3 data-i18n="how_we_work_step_3_title">Development</h3>
+            <p data-i18n="how_we_work_step_3_desc">يقوم فريق المطورين لدينا ببناء حلول تقنية قوية وآمنة باستخدام أحدث التقنيات لضمان أفضل أداء.
+              eiusmod tempor incididunt ut labore et
               dolore magna.</p>
             <div class="step-arrow">
               <i class="bi bi-arrow-right"></i>
@@ -550,9 +564,10 @@
             <div class="step-icon">
               <i class="bi bi-rocket-takeoff"></i>
             </div>
-            <div class="step-number">Step 4</div>
-            <h3>Launch &amp; Support</h3>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+            <div class="step-number" data-i18n="how_we_work_step_4_num">Step 4</div>
+            <h3 data-i18n="how_we_work_step_4_title">Launch &amp; Support</h3>
+            <p data-i18n="how_we_work_step_4_desc">بعد الإطلاق، نقدم دعمًا فنيًا مستمرًا وصيانة لضمان استمرارية عمل الحلول بكفاءة عالية.
+              blanditii...
               atque.</p>
           </div>
         </div>
@@ -566,18 +581,18 @@
 
       <div class="container">
 
-        <div class="row g-4">
-          <div class="col-lg-4">
+        <div class="row g-4" data-aos="fade-up">
+          <div class="col-lg-4" data-aos="fade-right">
             <ul class="nav nav-tabs flex-column" role="tablist">
               <li class="nav-item">
                 <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#features-tab-1" role="tab">
                   <div class="d-flex align-items-center">
                     <div class="icon-box">
-                      <i class="bi bi-people"></i>
+                      <i class="bi bi-code-slash"></i>
                     </div>
                     <div class="ms-3">
-                      <h4>Vestibulum ante ipsum</h4>
-                      <p>Proin iaculis purus consequat</p>
+                      <h4 data-i18n="features_tab_1_title">تطوير الويب</h4>
+                      <p data-i18n="features_tab_1_desc">حلول برمجية مبتكرة وقابلة للتطوير.</p>
                     </div>
                   </div>
                 </a>
@@ -586,11 +601,11 @@
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2" role="tab">
                   <div class="d-flex align-items-center">
                     <div class="icon-box">
-                      <i class="bi bi-heart"></i>
+                      <i class="bi bi-palette"></i>
                     </div>
                     <div class="ms-3">
-                      <h4>Curabitur aliquet quam</h4>
-                      <p>Nulla quis lorem ut libero</p>
+                      <h4 data-i18n="features_tab_2_title">تصميم UI/UX</h4>
+                      <p data-i18n="features_tab_2_desc">تجربة مستخدم فريدة وجذابة.</p>
                     </div>
                   </div>
                 </a>
@@ -599,11 +614,11 @@
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3" role="tab">
                   <div class="d-flex align-items-center">
                     <div class="icon-box">
-                      <i class="bi bi-house-heart"></i>
+                      <i class="bi bi-graph-up-arrow"></i>
                     </div>
                     <div class="ms-3">
-                      <h4>Luna stride flared</h4>
-                      <p>Sed ut perspiciatis unde omnis</p>
+                      <h4 data-i18n="features_tab_3_title">تسويق رقمي</h4>
+                      <p data-i18n="features_tab_3_desc">استراتيجيات فعالة لنمو أعمالك.</p>
                     </div>
                   </div>
                 </a>
@@ -612,11 +627,11 @@
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-4" role="tab">
                   <div class="d-flex align-items-center">
                     <div class="icon-box">
-                      <i class="bi bi-person-heart"></i>
+                      <i class="bi bi-envelope-at"></i>
                     </div>
                     <div class="ms-3">
-                      <h4>Quisque Velit Nisi</h4>
-                      <p>Duis aute irure dolor in</p>
+                      <h4 data-i18n="features_tab_4_title">خدمات البريد الإلكتروني</h4>
+                      <p data-i18n="features_tab_4_desc">تواصل احترافي وآمن.</p>
                     </div>
                   </div>
                 </a>
@@ -625,11 +640,11 @@
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-5" role="tab">
                   <div class="d-flex align-items-center">
                     <div class="icon-box">
-                      <i class="bi bi-briefcase"></i>
+                      <i class="bi bi-cloud-upload"></i>
                     </div>
                     <div class="ms-3">
-                      <h4>Curabitur Aliquet</h4>
-                      <p>Excepteur sint occaecat cupidatat</p>
+                      <h4 data-i18n="features_tab_5_title">حلول سحابية</h4>
+                      <p data-i18n="features_tab_5_desc">أداء فائق وموثوقية عالية.</p>
                     </div>
                   </div>
                 </a>
@@ -637,35 +652,31 @@
             </ul>
           </div>
 
-          <div class="col-lg-8">
+          <div class="col-lg-8" data-aos="fade-left" data-aos-delay="100">
             <div class="tab-content">
               <div class="tab-pane fade active show" id="features-tab-1" role="tabpanel">
                 <div class="content-box">
                   <div class="row g-4">
                     <div class="col-lg-6">
-                      <h3>Nullam Lacinia Consectetur</h3>
-                      <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec
-                        velit
-                        neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
-                      <p class="highlight">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac
-                        diam
-                        sit amet quam vehicula elementum sed sit amet dui.</p>
+                      <h3 data-i18n="features_content_1_title">تطوير ويب يواكب المستقبل</h3>
+                      <p data-i18n="features_content_1_p1">نحن نجمع بين أحدث التقنيات والخبرة العميقة لبناء مواقع وتطبيقات ويب سريعة وآمنة وقابلة للتطوير تلبي طموحاتك وتنمو مع أعمالك.</p>
+                      <p class="highlight" data-i18n="features_content_1_p2">سواء كنت تحتاج إلى متجر إلكتروني متكامل، أو بوابة إلكترونية مخصصة، أو نظام إدارة محتوى سهل الاستخدام، فإننا نقدم الحل الأمثل الذي يعكس هوية علامتك التجارية.</p>
                       <ul class="features-list">
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Curabitur aliquet quam id dui posuere blandit</span>
+                          <span data-i18n="features_content_1_li1">Curabitur aliquet quam id dui posuere blandit</span>
                         </li>
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Nulla quis lorem ut libero malesuada feugiat</span>
+                          <span data-i18n="features_content_1_li2">Nulla quis lorem ut libero malesuada feugiat</span>
                         </li>
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Vestibulum ac diam sit amet quam vehicula</span>
+                          <span data-i18n="features_content_1_li3">Vestibulum ac diam sit amet quam vehicula</span>
                         </li>
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Donec rutrum congue leo eget malesuada</span>
+                          <span data-i18n="features_content_1_li4">Donec rutrum congue leo eget malesuada</span>
                         </li>
                       </ul>
                     </div>
@@ -682,27 +693,25 @@
                 <div class="content-box">
                   <div class="row g-4">
                     <div class="col-lg-6">
-                      <h3>Sed Porttitor Lectus Nibh</h3>
-                      <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus.
-                        Vestibulum ante ipsum primis in faucibus.</p>
-                      <p class="highlight">Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero
-                        malesuada feugiat.</p>
+                      <h3 data-i18n="features_content_2_title">تصميم يركز على تجربة المستخدم</h3>
+                      <p data-i18n="features_content_2_p1">نؤمن بأن التصميم الناجح هو الذي يجمع بين الجمال وسهولة الاستخدام. فريقنا من مصممي واجهات وتجربة المستخدم يعمل على إنشاء واجهات بديهية وجذابة تضمن تفاعل جمهورك بسلاسة.</p>
+                      <p class="highlight" data-i18n="features_content_2_p2">نتبع منهجية عمل تبدأ من أبحاث المستخدم، مروراً بالنماذج الأولية والاختبار، وصولاً إلى التصميم النهائي الذي يحقق أهدافك ويسعد المستخدمين.</p>
                       <ul class="features-list">
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Vivamus suscipit tortor eget felis porttitor</span>
+                          <span data-i18n="features_content_2_li1">أبحاث المستخدم والنماذج الأولية</span>
                         </li>
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Curabitur aliquet quam id dui posuere</span>
+                          <span data-i18n="features_content_2_li2">تصميم واجهات جذابة</span>
                         </li>
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Nulla quis lorem ut libero malesuada</span>
+                          <span data-i18n="features_content_2_li3">تحسين قابلية الاستخدام</span>
                         </li>
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Vestibulum ac diam sit amet quam</span>
+                          <span data-i18n="features_content_2_li4">تصميم متوافق مع الهوية البصرية</span>
                         </li>
                       </ul>
                     </div>
@@ -719,28 +728,25 @@
                 <div class="content-box">
                   <div class="row g-4">
                     <div class="col-lg-6">
-                      <h3>Praesent Sapien Massa</h3>
-                      <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in
-                        faucibus orci luctus et ultrices posuere cubilia Curae.</p>
-                      <p class="highlight">Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam
-                        vehicula
-                        elementum sed sit amet dui.</p>
+                      <h3 data-i18n="features_content_3_title">استراتيجيات تسويق رقمي تحقق النتائج</h3>
+                      <p data-i18n="features_content_3_p1">نساعدك على زيادة ظهورك على الإنترنت، وجذب المزيد من العملاء المحتملين، وتحقيق أهدافك التسويقية من خلال استراتيجيات مدروسة بعناية.</p>
+                      <p class="highlight" data-i18n="features_content_3_p2">نقدم خدمات متكاملة تشمل تحسين محركات البحث (SEO)، وإدارة الحملات الإعلانية المدفوعة (SEM)، والتسويق عبر وسائل التواصل الاجتماعي، وتسويق المحتوى.</p>
                       <ul class="features-list">
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Curabitur non nulla sit amet nisl</span>
+                          <span data-i18n="features_content_3_li1">تحسين محركات البحث (SEO)</span>
                         </li>
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Vestibulum ac diam sit amet quam</span>
+                          <span data-i18n="features_content_3_li2">إدارة الحملات الإعلانية (SEM)</span>
                         </li>
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Donec rutrum congue leo eget</span>
+                          <span data-i18n="features_content_3_li3">التسويق عبر وسائل التواصل الاجتماعي</span>
                         </li>
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Nulla quis lorem ut libero</span>
+                          <span data-i18n="features_content_3_li4">تسويق المحتوى الفعال</span>
                         </li>
                       </ul>
                     </div>
@@ -757,29 +763,25 @@
                 <div class="content-box">
                   <div class="row g-4">
                     <div class="col-lg-6">
-                      <h3>Curabitur Aliquet Quam</h3>
-                      <p>Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed
-                        sit
-                        amet dui. Curabitur aliquet quam id dui posuere blandit.</p>
-                      <p class="highlight">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-                        Curabitur
-                        non nulla sit amet nisl tempus.</p>
+                      <h3 data-i18n="features_content_4_title">حلول بريد إلكتروني احترافية</h3>
+                      <p data-i18n="features_content_4_p1">عزز من احترافية وموثوقية علامتك التجارية مع خدمات البريد الإلكتروني للشركات. نوفر لك حلولاً آمنة ومستقرة تضمن تواصلاً فعالاً مع عملائك وشركائك.</p>
+                      <p class="highlight" data-i18n="features_content_4_p2">استفد من الميزات المتقدمة مثل الحماية من الرسائل المزعجة، وسعات التخزين الكبيرة، والمزامنة السلسة عبر جميع أجهزتك.</p>
                       <ul class="features-list">
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Nulla quis lorem ut libero malesuada</span>
+                          <span data-i18n="features_content_4_li1">بريد إلكتروني باسم نطاقك الخاص</span>
                         </li>
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Curabitur aliquet quam id dui</span>
+                          <span data-i18n="features_content_4_li2">حماية متقدمة من البريد المزعج</span>
                         </li>
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Vestibulum ac diam sit amet</span>
+                          <span data-i18n="features_content_4_li3">مساحات تخزين كبيرة</span>
                         </li>
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Donec rutrum congue leo</span>
+                          <span data-i18n="features_content_4_li4">سهولة الوصول والمزامنة</span>
                         </li>
                       </ul>
                     </div>
@@ -796,29 +798,25 @@
                 <div class="content-box">
                   <div class="row g-4">
                     <div class="col-lg-6">
-                      <h3>Vestibulum Ante Ipsum</h3>
-                      <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Quisque velit nisi, pretium
-                        ut
-                        lacinia in, elementum id enim.</p>
-                      <p class="highlight">Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam
-                        vehicula
-                        elementum sed sit amet dui.</p>
+                      <h3 data-i18n="features_content_5_title">بنية تحتية سحابية موثوقة</h3>
+                      <p data-i18n="features_content_5_p1">نقدم خدمات استضافة وحلول سحابية قابلة للتطوير تضمن استمرارية أعمالك وأمان بياناتك. سواء كنت تحتاج إلى استضافة موقع ويب أو بنية تحتية معقدة، فإننا نوفر لك الحل الأمثل.</p>
+                      <p class="highlight" data-i18n="features_content_5_p2">فريقنا متخصص في إدارة الخوادم، والنسخ الاحتياطي، وتوفير بيئة عمل سحابية آمنة وعالية الأداء لدعم نمو أعمالك دون انقطاع.</p>
                       <ul class="features-list">
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Vivamus suscipit tortor eget felis</span>
+                          <span data-i18n="features_content_5_li1">استضافة عالية الأداء</span>
                         </li>
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Curabitur aliquet quam id dui</span>
+                          <span data-i18n="features_content_5_li2">قابلية للتوسع حسب الطلب</span>
                         </li>
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Nulla quis lorem ut libero</span>
+                          <span data-i18n="features_content_5_li3">نسخ احتياطي آمن</span>
                         </li>
                         <li>
                           <i class="bi bi-check2-circle"></i>
-                          <span>Vestibulum ac diam sit amet</span>
+                          <span data-i18n="features_content_5_li4">دعم فني متخصص للسحابة</span>
                         </li>
                       </ul>
                     </div>
@@ -841,30 +839,28 @@
     <section id="services" class="services section light-background">
 
       <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Services</h2>
-        <p>CHECK OUR SERVICES</p>
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-i18n="services_title">Services</h2>
+        <p data-i18n="services_subtitle">CHECK OUR SERVICES</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
         <div class="row gy-4">
 
-          <div class="col-lg-6 col-md-6">
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-card featured">
               <div class="service-icon">
                 <i class="bi bi-code-slash"></i>
               </div>
               <div class="service-content">
-                <h3><a href="service-details.html">Web Development</a></h3>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec
-                  rutrum congue leo eget malesuada.</p>
+                <h3><a href="service-details.html" data-i18n="services_card_1_title">Web Development</a></h3>
+                <p data-i18n="services_card_1_desc">تصميم وتطوير مواقع ويب عصرية ومتجاوبة تتناسب مع جميع الأجهزة.</p>
                 <div class="service-meta">
-                  <span class="badge popular">Most Popular</span>
-                  <span class="price">Starting at $2,999</span>
+                  <span class="badge popular" data-i18n="services_card_1_badge">Most Popular</span>
+                  <span class="price" data-i18n="services_card_1_price">Starting at $2,999</span>
                 </div>
-                <a href="service-details.html" class="btn-cta">
-                  <span>Get Started</span>
+                <a href="service-details.html" class="btn-cta"><span data-i18n="services_card_1_button">Get Started</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -872,20 +868,18 @@
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6">
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-card">
               <div class="service-icon">
                 <i class="bi bi-palette"></i>
               </div>
               <div class="service-content">
-                <h3><a href="service-details.html">UI/UX Design</a></h3>
-                <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit,
-                  eget tincidunt nibh pulvinar.</p>
+                <h3><a href="service-details.html" data-i18n="services_card_2_title">تصميم واجهة المستخدم (UI/UX)</a></h3>
+                <p data-i18n="services_card_2_desc">نصمم واجهات مستخدم جذابة وسهلة الاستخدام تركز على تقديم أفضل تجربة ممكنة لعملائك.</p>
                 <div class="service-meta">
-                  <span class="price">Starting at $1,899</span>
+                  <span class="price" data-i18n="services_card_2_price">Starting at $1,899</span>
                 </div>
-                <a href="service-details.html" class="btn-cta">
-                  <span>Learn More</span>
+                <a href="service-details.html" class="btn-cta"><span data-i18n="services_card_2_button">Learn More</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -893,17 +887,15 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-card compact">
               <div class="service-icon">
                 <i class="bi bi-graph-up-arrow"></i>
               </div>
               <div class="service-content">
-                <h3><a href="service-details.html">Digital Marketing</a></h3>
-                <p>Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac
-                  lectus.</p>
-                <a href="service-details.html" class="btn-cta">
-                  <span>Explore</span>
+                <h3><a href="service-details.html" data-i18n="services_card_3_title">Digital Marketing</a></h3>
+                <p data-i18n="services_card_3_desc">نساعدك على الوصول إلى جمهورك المستهدف وزيادة مبيعاتك من خلال حملات تسويق رقمي مدروسة وفعالة.</p>
+                <a href="service-details.html" class="btn-cta"><span data-i18n="services_card_3_button">Explore</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -911,17 +903,15 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-card compact">
               <div class="service-icon">
                 <i class="bi bi-shield-check"></i>
               </div>
               <div class="service-content">
-                <h3><a href="service-details.html">Security Solutions</a></h3>
-                <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar vel. Sed porttitor lectus nibh vestibulum
-                  ac diam sit.</p>
-                <a href="service-details.html" class="btn-cta">
-                  <span>Discover</span>
+                <h3><a href="service-details.html" data-i18n="services_card_4_title">خدمات البريد الإلكتروني</a></h3>
+                <p data-i18n="services_card_4_desc">حلول بريد إلكتروني احترافية وموثوقة لشركتك، تضمن تواصلاً آمناً وفعالاً مع عملائك.</p>
+                <a href="service-details.html" class="btn-cta"><span data-i18n="services_card_4_button">Discover</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -929,17 +919,15 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="service-card compact">
               <div class="service-icon">
                 <i class="bi bi-cloud-upload"></i>
               </div>
               <div class="service-content">
-                <h3><a href="service-details.html">Cloud Services</a></h3>
-                <p>Pellentesque in ipsum id orci porta dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et
-                  ultrices.</p>
-                <a href="service-details.html" class="btn-cta">
-                  <span>Get Quote</span>
+                <h3><a href="service-details.html" data-i18n="services_card_5_title">Cloud Services</a></h3>
+                <p data-i18n="services_card_5_desc">نوفر بنية تحتية سحابية قوية وآمنة لاستضافة تطبيقاتك ومواقعك، مع ضمان أعلى مستويات الأداء.</p>
+                <a href="service-details.html" class="btn-cta"><span data-i18n="services_card_5_button">Get Quote</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -949,30 +937,30 @@
 
         </div>
 
-        <div class="stats-highlight">
+        <div class="stats-highlight" data-aos="zoom-in">
           <div class="row">
             <div class="col-lg-3 col-md-6">
               <div class="stat-item">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Projects Completed</div>
+                <div class="stat-number" data-i18n="hero_stat_1_num">+500</div>
+                <div class="stat-label" data-i18n="services_stat_1_label">Projects Completed</div>
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
               <div class="stat-item">
-                <div class="stat-number">98%</div>
-                <div class="stat-label">Client Satisfaction</div>
+                <div class="stat-number" data-i18n="hero_stat_2_num">98%</div>
+                <div class="stat-label" data-i18n="services_stat_2_label">Client Satisfaction</div>
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
               <div class="stat-item">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Support Available</div>
+                <div class="stat-number" data-i18n="hero_stat_3_num">24/7</div>
+                <div class="stat-label" data-i18n="services_stat_3_label">Support Available</div>
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
               <div class="stat-item">
-                <div class="stat-number">5+</div>
-                <div class="stat-label">Years Experience</div>
+                <div class="stat-number" data-i18n="about_stat_1_num">+8</div>
+                <div class="stat-label" data-i18n="services_stat_4_label">Years Experience</div>
               </div>
             </div>
           </div>
@@ -981,121 +969,14 @@
       </div>
 
     </section><!-- /Services Section -->
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing section">
-
-      <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Pricing</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4 justify-content-center">
-
-          <!-- Basic Plan -->
-          <div class="col-lg-4 col-md-6">
-            <div class="pricing-item">
-              <div class="pricing-icon">
-                <i class="bi bi-star"></i>
-              </div>
-              <h3>Standard</h3>
-              <div class="price">
-                <span class="currency">$</span>9<span class="period">/month</span>
-              </div>
-              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
-              <ul class="features-list">
-                <li>
-                  <i class="bi bi-check2"></i>
-                  Vestibulum ante ipsum primis
-                </li>
-                <li>
-                  <i class="bi bi-check2"></i>
-                  Fusce vulputate eleifend
-                </li>
-                <li>
-                  <i class="bi bi-check2"></i>
-                  Nullam ac tortor vitae
-                </li>
-              </ul>
-              <a href="#" class="btn-pricing">Buy Now</a>
-            </div>
-          </div><!-- End Basic Plan -->
-
-          <!-- Professional Plan -->
-          <div class="col-lg-4 col-md-6">
-            <div class="pricing-item featured">
-              <div class="pricing-badge">Recommended</div>
-              <div class="pricing-icon">
-                <i class="bi bi-stars"></i>
-              </div>
-              <h3>Professional</h3>
-              <div class="price">
-                <span class="currency">$</span>29<span class="period">/month</span>
-              </div>
-              <p class="description">Maecenas tempus tellus eget condimentum rhoncus semper.</p>
-              <ul class="features-list">
-                <li>
-                  <i class="bi bi-check2"></i>
-                  Donec quam felis ultricies
-                </li>
-                <li>
-                  <i class="bi bi-check2"></i>
-                  Aenean massa imperdiet
-                </li>
-                <li>
-                  <i class="bi bi-check2"></i>
-                  Cras dapibus vivamus
-                </li>
-              </ul>
-              <a href="#" class="btn-pricing">Buy Now</a>
-            </div>
-          </div><!-- End Professional Plan -->
-
-          <!-- Ultimate Plan -->
-          <div class="col-lg-4 col-md-6">
-            <div class="pricing-item">
-              <div class="pricing-icon">
-                <i class="bi bi-star-fill"></i>
-              </div>
-              <h3>Ultimate</h3>
-              <div class="price">
-                <span class="currency">$</span>49<span class="period">/month</span>
-              </div>
-              <p class="description">Etiam rhoncus maecenas tempus tellus eget condimentum.</p>
-              <ul class="features-list">
-                <li>
-                  <i class="bi bi-check2"></i>
-                  Phasellus viverra nulla
-                </li>
-                <li>
-                  <i class="bi bi-check2"></i>
-                  Quisque rutrum aenean
-                </li>
-                <li>
-                  <i class="bi bi-check2"></i>
-                  Etiam ultricies nisi vel
-                </li>
-              </ul>
-              <a href="#" class="btn-pricing">Buy Now</a>
-            </div>
-          </div><!-- End Ultimate Plan -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Pricing Section -->
-
+    
     <!-- Faq Section -->
     <section id="faq" class="faq section">
 
       <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Frequently Asked Questions</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-i18n="faq_title">Frequently Asked Questions</h2>
+        <p data-i18n="faq_subtitle">هل لديك أسئلة؟ لدينا الإجابات. كل ما تحتاج لمعرفته حول خدماتنا.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -1103,14 +984,14 @@
         <div class="row justify-content-center">
           <div class="col-lg-10">
 
-            <div class="faq-wrapper">
+            <div class="faq-wrapper" data-aos="fade-up" data-aos-delay="100">
 
               <div class="faq-item faq-active">
                 <div class="faq-header">
                   <div class="faq-icon">
                     <i class="bi bi-question-circle"></i>
                   </div>
-                  <h4>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar?</h4>
+                  <h4 data-i18n="faq_q1">ما هي الخدمات الرئيسية التي تقدمونها؟</h4>
                   <div class="faq-toggle">
                     <i class="bi bi-plus"></i>
                     <i class="bi bi-dash"></i>
@@ -1118,7 +999,7 @@
                 </div>
                 <div class="faq-content">
                   <div class="content-inner">
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    <p data-i18n="faq_a1">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                       Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
                   </div>
                 </div>
@@ -1129,7 +1010,7 @@
                   <div class="faq-icon">
                     <i class="bi bi-question-circle"></i>
                   </div>
-                  <h4>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem?</h4>
+                  <h4 data-i18n="faq_q2">كم من الوقت يستغرق إنجاز مشروع نموذجي؟</h4>
                   <div class="faq-toggle">
                     <i class="bi bi-plus"></i>
                     <i class="bi bi-dash"></i>
@@ -1137,7 +1018,7 @@
                 </div>
                 <div class="faq-content">
                   <div class="content-inner">
-                    <p>Donec rutrum congue leo eget malesuada. Sed porttitor lectus nibh. Vestibulum ac diam sit amet
+                    <p data-i18n="faq_a2">Donec rutrum congue leo eget malesuada. Sed porttitor lectus nibh. Vestibulum ac diam sit amet
                       quam vehicula elementum sed sit amet dui. Proin eget tortor risus. Curabitur aliquet quam id dui
                       posuere blandit.</p>
                   </div>
@@ -1149,7 +1030,7 @@
                   <div class="faq-icon">
                     <i class="bi bi-question-circle"></i>
                   </div>
-                  <h4>Vestibulum ante ipsum primis in faucibus orci luctus?</h4>
+                  <h4 data-i18n="faq_q3">هل تقدمون خدمات الدعم بعد إطلاق المشروع؟</h4>
                   <div class="faq-toggle">
                     <i class="bi bi-plus"></i>
                     <i class="bi bi-dash"></i>
@@ -1157,7 +1038,7 @@
                 </div>
                 <div class="faq-content">
                   <div class="content-inner">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    <p data-i18n="faq_a3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
                     </p>
                   </div>
@@ -1169,7 +1050,7 @@
                   <div class="faq-icon">
                     <i class="bi bi-question-circle"></i>
                   </div>
-                  <h4>Nulla facilisi morbi tempus iaculis urna id volutpat?</h4>
+                  <h4 data-i18n="faq_q4">كيف يمكنني البدء في مشروع معكم؟</h4>
                   <div class="faq-toggle">
                     <i class="bi bi-plus"></i>
                     <i class="bi bi-dash"></i>
@@ -1177,7 +1058,7 @@
                 </div>
                 <div class="faq-content">
                   <div class="content-inner">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                    <p data-i18n="faq_a4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
                       Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
                   </div>
                 </div>
@@ -1188,7 +1069,7 @@
                   <div class="faq-icon">
                     <i class="bi bi-question-circle"></i>
                   </div>
-                  <h4>Praesent sapien massa, convallis a pellentesque nec?</h4>
+                  <h4 data-i18n="faq_q5">هل خدماتكم مناسبة للشركات الصغيرة والناشئة؟</h4>
                   <div class="faq-toggle">
                     <i class="bi bi-plus"></i>
                     <i class="bi bi-dash"></i>
@@ -1196,7 +1077,7 @@
                 </div>
                 <div class="faq-content">
                   <div class="content-inner">
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                    <p data-i18n="faq_a5">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
                       deleniti atque corrupti quos dolores et quas molestias excepturi sint.</p>
                   </div>
                 </div>
@@ -1216,7 +1097,7 @@
 
       <div class="container">
 
-        <div class="cta-wrapper">
+        <div class="cta-wrapper" data-aos="fade-up">
           <div class="cta-shapes">
             <div class="shape shape-1"></div>
             <div class="shape shape-2"></div>
@@ -1226,10 +1107,9 @@
           <div class="row g-0">
             <div class="col-lg-7">
               <div class="cta-content p-5">
-                <span class="badge-custom">Premium Offer</span>
-                <h2 class="mt-4 mb-4">Transform Your Experience With Our Solution</h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <span class="badge-custom" data-i18n="cta_badge">Premium Offer</span>
+                <h2 class="mt-4 mb-4" data-i18n="cta_title">هل أنت مستعد للارتقاء بأعمالك؟</h2>
+                <p class="mb-4" data-i18n="cta_desc">انضم إلى قائمة عملائنا المميزين وابدأ رحلتك نحو النجاح الرقمي اليوم. فريقنا المتخصص سيساعدك على تحقيق أهدافك بأفضل الحلول التقنية.</p>
 
                 <div class="row benefits-row mb-5">
                   <div class="col-md-6">
@@ -1238,8 +1118,8 @@
                         <i class="bi bi-lightning-charge-fill"></i>
                       </div>
                       <div class="benefit-content">
-                        <h5>Quick Setup</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h5 data-i18n="cta_benefit1_title">تنفيذ سريع</h5>
+                        <p data-i18n="cta_benefit1_desc">نضمن إطلاق مشروعك في وقت قياسي.</p>
                       </div>
                     </div>
                   </div>
@@ -1249,19 +1129,19 @@
                         <i class="bi bi-shield-check"></i>
                       </div>
                       <div class="benefit-content">
-                        <h5>Full Security</h5>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                        <h5 data-i18n="cta_benefit2_title">أمان كامل</h5>
+                        <p data-i18n="cta_benefit2_desc">نطبق أعلى معايير الأمان لحماية بياناتك.</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div class="action-buttons">
-                  <a href="#" class="btn btn-primary">Start Now</a>
-                  <a href="#" class="btn btn-outline">Learn More</a>
+                  <a href="#" class="btn btn-primary" data-i18n="cta_button_start">Start Now</a>
+                  <a href="#" class="btn btn-outline" data-i18n="cta_button_learn">اطلب استشارة</a>
                   <div class="guarantee-badge">
                     <i class="bi bi-patch-check-fill"></i>
-                    <span>30-Day Money Back</span>
+                    <span data-i18n="cta_guarantee">30-Day Money Back</span>
                   </div>
                 </div>
               </div>
@@ -1272,11 +1152,11 @@
                 <img src="assets/img/illustration/illustration-3.webp" alt="Illustration" class="img-fluid main-image">
                 <div class="floating-element element-1">
                   <i class="bi bi-star-fill"></i>
-                  <span>4.9 Rating</span>
+                  <span data-i18n="cta_rating_label">4.9 Rating</span>
                 </div>
                 <div class="floating-element element-2">
                   <i class="bi bi-people-fill"></i>
-                  <span>10k+ Users</span>
+                  <span data-i18n="cta_users_label">10k+ Users</span>
                 </div>
                 <div class="pattern-dots"></div>
               </div>
@@ -1288,168 +1168,57 @@
 
     </section><!-- /Call To Action Section -->
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-
-      <div class="container">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 1
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
-                    Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/person/person-m-9.webp" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum
-                    velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/person/person-f-5.webp" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis
-                    minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/person/person-f-12.webp" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim
-                    duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/person/person-m-12.webp" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt
-                    culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/person/person-m-13.webp" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
 
       <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Portfolio</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-i18n="portfolio_title">مشاريعنا</h2>
+        <p data-i18n="portfolio_subtitle">استكشف مجموعة من المشاريع التي نفخر بها، والتي تعكس خبرتنا وإبداعنا في تقديم حلول تقنية متكاملة.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order" data-aos="fade-up" data-aos-delay="100">
 
           <div class="row">
             <div class="col-lg-12 d-flex justify-content-center mt-4">
               <ul class="portfolio-filters isotope-filters">
-                <li data-filter="*" class="filter-active">All</li>
-                <li data-filter=".filter-photography">Photography</li>
-                <li data-filter=".filter-design">Design</li>
-                <li data-filter=".filter-automotive">Automotive</li>
-                <li data-filter=".filter-nature">Nature</li>
+                <li data-filter="*" class="filter-active" data-i18n="portfolio_filter_all">All</li>
+                <li data-filter=".filter-photography" data-i18n="portfolio_filter_photo">تطوير ويب</li>
+                <li data-filter=".filter-design" data-i18n="portfolio_filter_design">تصميم UI/UX</li>
+                <li data-filter=".filter-automotive" data-i18n="portfolio_filter_auto">تسويق رقمي</li>
+                <li data-filter=".filter-nature" data-i18n="portfolio_filter_nature">حلول سحابية</li>
               </ul>
             </div>
           </div>
 
-          <div class="row gy-4 portfolio-container isotope-container">
+          <div class="row gy-4 portfolio-container isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-photography">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-photography" data-aos="zoom-in" data-aos-delay="300">
               <div class="portfolio-wrap">
                 <img src="assets/img/portfolio/portfolio-portrait-1.webp" class="img-fluid" alt="Portfolio Image"
                   loading="lazy">
                 <div class="portfolio-info">
-                  <h4>Capturing Moments</h4>
-                  <p>Photography</p>
+                  <h4 data-i18n="portfolio_item1_title">منصة تجارة إلكترونية</h4>
+                  <p data-i18n="portfolio_item1_cat">تطوير ويب</p>
                   <div class="portfolio-links">
                     <a href="assets/img/portfolio/portfolio-portrait-1.webp" class="glightbox"
-                      title="Capturing Moments"><i class="bi bi-zoom-in"></i></a>
+                      data-i18n="[title]portfolio_item1_title" title="Capturing Moments"><i class="bi bi-zoom-in"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link-45deg"></i></a>
                   </div>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design" data-aos="zoom-in" data-aos-delay="400">
               <div class="portfolio-wrap">
                 <img src="assets/img/portfolio/portfolio-2.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                 <div class="portfolio-info">
-                  <h4>Woodcraft Design</h4>
-                  <p>Web Design</p>
+                  <h4 data-i18n="portfolio_item2_title">تصميم واجهة متجر</h4>
+                  <p data-i18n="portfolio_item2_cat">تصميم</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/portfolio-2.webp" class="glightbox" title="Woodcraft Design"><i
+                    <a href="assets/img/portfolio/portfolio-2.webp" class="glightbox" data-i18n="[title]portfolio_item2_title" title="Woodcraft Design"><i
                         class="bi bi-zoom-in"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link-45deg"></i></a>
                   </div>
@@ -1457,15 +1226,15 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-automotive">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-automotive" data-aos="zoom-in" data-aos-delay="500">
               <div class="portfolio-wrap">
                 <img src="assets/img/portfolio/portfolio-portrait-2.webp" class="img-fluid" alt="Portfolio Image"
                   loading="lazy">
                 <div class="portfolio-info">
-                  <h4>Classic Beauty</h4>
-                  <p>Automotive</p>
+                  <h4 data-i18n="portfolio_item3_title">حملة إعلانية</h4>
+                  <p data-i18n="portfolio_item3_cat">تسويق رقمي</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/portfolio-portrait-2.webp" class="glightbox" title="Classic Beauty"><i
+                    <a href="assets/img/portfolio/portfolio-portrait-2.webp" class="glightbox" data-i18n="[title]portfolio_item3_title" title="Classic Beauty"><i
                         class="bi bi-zoom-in"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link-45deg"></i></a>
                   </div>
@@ -1473,15 +1242,15 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-nature">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-nature" data-aos="zoom-in" data-aos-delay="600">
               <div class="portfolio-wrap">
                 <img src="assets/img/portfolio/portfolio-portrait-4.webp" class="img-fluid" alt="Portfolio Image"
                   loading="lazy">
                 <div class="portfolio-info">
-                  <h4>Natural Growth</h4>
-                  <p>Nature</p>
+                  <h4 data-i18n="portfolio_item4_title">هوية شركة تقنية</h4>
+                  <p data-i18n="portfolio_item4_cat">حلول سحابية</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/portfolio-portrait-4.webp" class="glightbox" title="Natural Growth"><i
+                    <a href="assets/img/portfolio/portfolio-portrait-4.webp" class="glightbox" data-i18n="[title]portfolio_item4_title" title="Natural Growth"><i
                         class="bi bi-zoom-in"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link-45deg"></i></a>
                   </div>
@@ -1489,14 +1258,14 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-photography">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-photography" data-aos="zoom-in" data-aos-delay="700">
               <div class="portfolio-wrap">
                 <img src="assets/img/portfolio/portfolio-5.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                 <div class="portfolio-info">
-                  <h4>Urban Stories</h4>
-                  <p>Photography</p>
+                  <h4 data-i18n="portfolio_item5_title">تطبيق حجوزات</h4>
+                  <p data-i18n="portfolio_item5_cat">تطوير ويب</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/portfolio-5.webp" class="glightbox" title="Urban Stories"><i
+                    <a href="assets/img/portfolio/portfolio-5.webp" class="glightbox" data-i18n="[title]portfolio_item5_title" title="Urban Stories"><i
                         class="bi bi-zoom-in"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link-45deg"></i></a>
                   </div>
@@ -1504,14 +1273,14 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design" data-aos="zoom-in" data-aos-delay="800">
               <div class="portfolio-wrap">
                 <img src="assets/img/portfolio/portfolio-6.webp" class="img-fluid" alt="Portfolio Image" loading="lazy">
                 <div class="portfolio-info">
-                  <h4>Digital Experience</h4>
-                  <p>Web Design</p>
+                  <h4 data-i18n="portfolio_item6_title">تصميم لوحة تحكم</h4>
+                  <p data-i18n="portfolio_item6_cat">تصميم</p>
                   <div class="portfolio-links">
-                    <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox" title="Digital Experience"><i
+                    <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox" data-i18n="[title]portfolio_item6_title" title="Digital Experience"><i
                         class="bi bi-zoom-in"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bi bi-link-45deg"></i></a>
                   </div>
@@ -1530,14 +1299,14 @@
     <!-- Team Section -->
     <section id="team" class="team section">
       <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Team</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-i18n="team_title">Team</h2>
+        <p data-i18n="team_subtitle">تعرف على الخبراء الذين يقفون خلف نجاح إنجاز.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="team-slider swiper init-swiper">
+        <div class="team-slider swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
           <script type="application/json" class="swiper-config">
             {
               "loop": true,
@@ -1585,10 +1354,9 @@
                   </div>
                 </div>
                 <div class="team-content">
-                  <h3>Daniel Chen</h3>
-                  <span>Marketing Specialist</span>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum.</p>
+                  <h3 data-i18n="team_member1_name">أحمد المصري</h3>
+                  <span data-i18n="team_member1_role">أخصائي تسويق</span>
+                  <p data-i18n="team_member1_desc">خبير في استراتيجيات التسويق الرقمي ونمو العلامات التجارية عبر الإنترنت.</p>
                 </div>
               </div><!-- End Team Card -->
             </div><!-- End slide item -->
@@ -1607,10 +1375,9 @@
                   </div>
                 </div>
                 <div class="team-content">
-                  <h3>Jason Parker</h3>
-                  <span>UI/UX Designer</span>
-                  <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                    magni.</p>
+                  <h3 data-i18n="team_member2_name">سارة خالد</h3>
+                  <span data-i18n="team_member2_role">مصممة واجهات مستخدم</span>
+                  <p data-i18n="team_member2_desc">مبدعة في تحويل الأفكار إلى تصميمات جذابة وسهلة الاستخدام تلبي احتياجات المستخدمين.</p>
                 </div>
               </div><!-- End Team Card -->
             </div><!-- End slide item -->
@@ -1628,29 +1395,29 @@
     <!-- Contact Section -->
     <section id="contact" class="contact section">
       <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      <div class="container section-title" data-aos="fade-up">
+        <h2 data-i18n="contact_title">Contact</h2>
+        <p data-i18n="contact_subtitle">نحن هنا لمساعدتك. تواصل معنا اليوم.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
         <div class="contact-main-wrapper">
-          <div class="map-wrapper">
+          <div class="map-wrapper" data-aos="fade-right">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
               width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
-          <div class="contact-content">
+          <div class="contact-content" data-aos="fade-left" data-aos-delay="100">
             <div class="contact-cards-container">
               <div class="contact-card">
                 <div class="icon-box">
                   <i class="bi bi-geo-alt"></i>
                 </div>
                 <div class="contact-text">
-                  <h4>Location</h4>
-                  <p>Dammam - KSA</p>
+                  <h4 data-i18n="contact_card_1_title">Location</h4>
+                  <p data-i18n="contact_card_1_text">Dammam - KSA</p>
                 </div>
               </div>
 
@@ -1659,8 +1426,8 @@
                   <i class="bi bi-envelope"></i>
                 </div>
                 <div class="contact-text">
-                  <h4>Email</h4>
-                  <p>Contact@EnjazTec.com</p>
+                  <h4 data-i18n="contact_card_2_title">Email</h4>
+                  <p data-i18n="contact_card_2_text">Contact@EnjazTec.com</p>
                 </div>
               </div>
 
@@ -1669,8 +1436,8 @@
                   <i class="bi bi-telephone"></i>
                 </div>
                 <div class="contact-text">
-                  <h4>Call</h4>
-                  <p>+966 56 282 41 04</p>
+                  <h4 data-i18n="contact_card_3_title">Call</h4>
+                  <p data-i18n="contact_card_3_text">+966 56 282 41 04</p>
                 </div>
               </div>
 
@@ -1679,42 +1446,45 @@
                   <i class="bi bi-clock"></i>
                 </div>
                 <div class="contact-text">
-                  <h4>Open Hours</h4>
-                  <p>Monday-Friday: 9AM - 6PM</p>
+                  <h4 data-i18n="contact_card_4_title">Open Hours</h4>
+                  <p data-i18n="contact_card_4_text">Monday-Friday: 9AM - 6PM</p>
                 </div>
               </div>
             </div>
 
             <div class="contact-form-container">
-              <h3>Get in Touch</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua consectetur adipiscing.</p>
+              <h3 data-i18n="contact_form_title">Get in Touch</h3>
+              <p data-i18n="contact_form_desc">املأ النموذج أدناه وسيقوم أحد أعضاء فريقنا بالرد عليك في أقرب وقت ممكن.</p>
 
               <form action="forms/contact.php" method="post" class="php-email-form">
                 <div class="row">
                   <div class="col-md-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
+                    <input type="text" name="name" class="form-control" id="name" data-i18n="[placeholder]contact_form_name_placeholder" placeholder="Your Name"
+                      required="">
                   </div>
                   <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                    <input type="email" class="form-control" name="email" id="email" data-i18n="[placeholder]contact_form_email_placeholder" placeholder="Your Email"
                       required="">
                   </div>
                 </div>
                 <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
+                  <input type="text" class="form-control" name="subject" id="subject" data-i18n="[placeholder]contact_form_subject_placeholder" placeholder="Subject"
+                    required="">
                 </div>
                 <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required=""></textarea>
+                  <textarea class="form-control" name="message" rows="5" data-i18n="[placeholder]contact_form_message_placeholder" placeholder="Message"
+                    required=""></textarea>
                 </div>
 
                 <div class="my-3">
-                  <div class="loading">Loading</div>
+                  <div class="loading" data-i18n="contact_form_loading">Loading</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="sent-message" data-i18n="contact_form_sent_message">Your message has been sent. Thank you!
+                  </div>
                 </div>
 
                 <div class="form-submit">
-                  <button type="submit">Send Message</button>
+                  <button type="submit" data-i18n="contact_form_button">Send Message</button>
                   <div class="social-links">
                     <a href="#"><i class="bi bi-twitter"></i></a>
                     <a href="#"><i class="bi bi-facebook"></i></a>
@@ -1737,10 +1507,9 @@
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Enjaz</span>
+            <span class="sitename" data-i18n="footer_sitename">Enjaz</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta
-            donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p data-i18n="footer_about_text">إنجاز للحلول التقنية، شريكك الموثوق للابتكار الرقمي. نقدم حلولاً متكاملة تساعدك على تحقيق أهدافك والتميز في عالم الأعمال.</p>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
@@ -1750,44 +1519,49 @@
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
+          <h4 data-i18n="footer_useful_links_title">Useful Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#" data-i18n="footer_link_home">Home</a></li>
+            <li><a href="#" data-i18n="footer_link_about">About us</a></li>
+            <li><a href="#" data-i18n="footer_link_services">Services</a></li>
+            <li><a href="#" data-i18n="footer_link_terms">Terms of service</a></li>
+            <li><a href="#" data-i18n="footer_link_privacy">Privacy policy</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
+          <h4 data-i18n="footer_our_services_title">Our Services</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#" data-i18n="footer_service_1">Web Design</a></li>
+            <li><a href="#" data-i18n="footer_service_2">Web Development</a></li>
+            <li><a href="#" data-i18n="footer_service_3">خدمات البريد الإلكتروني</a></li>
+            <li><a href="#" data-i18n="footer_service_4">Marketing</a></li>
+            <li><a href="#" data-i18n="footer_service_5">Graphic Design</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
+          <h4 data-i18n="footer_contact_us_title">Contact Us</h4>
+          <p data-i18n="footer_address_line1">الدمام</p>
+          <p data-i18n="footer_address_line2">المنطقة الشرقية</p>
+          <p data-i18n="footer_address_line3">المملكة العربية السعودية</p>
+          <p class="mt-4"><strong data-i18n="footer_phone_label">Phone:</strong> <span
+              data-i18n="footer_phone_number">04 41 282 56 966+</span></p>
+          <p><strong data-i18n="footer_email_label">Email:</strong> <span data-i18n="footer_email_address">info@enjaztec.com</span></p>
         </div>
 
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Enjaz Tec solutions</strong> <span>All Rights
-          Reserved</span></p>
+      <p><span data-i18n="footer_copyright_prefix">© Copyright</span> <strong class="px-1 sitename"
+          data-i18n="footer_copyright_owner">Enjaz Tec solutions</strong> <span
+          data-i18n="footer_copyright_suffix">All Rights
+          Reserved</span>
+      </p>
       <div class="credits">
-        Designed by <a href="https://EnjazTec.com/">Enjaz Tec</a>
+        <span data-i18n="footer_credits_prefix">Designed by</span> <a href="https://EnjazTec.com/"
+          data-i18n="footer_credits_designer">Enjaz Tec</a>
       </div>
     </div>
 
@@ -1813,6 +1587,7 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>

@@ -204,4 +204,93 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Animation on scroll function and init
+   */
+  function aosInit() {
+    AOS.init({
+      duration: 800,
+      easing: 'slide',
+      once: true,
+      mirror: false
+    });
+  }
+  window.addEventListener('load', aosInit);
+
+  /**
+   * Internationalization (i18n)
+   */
+  const defaultLang = 'ar';
+
+  async function setLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    localStorage.setItem('language', lang);
+
+    try {
+      const response = await fetch(`assets/lang/${lang}.json`);
+      if (!response.ok) {
+        console.error(`Could not load translation file: ${lang}.json`);
+        return;
+      }
+      const translations = await response.json();
+      updateContent(translations);
+    } catch (error) {
+      console.error('Error loading or parsing translation file:', error);
+    }
+  }
+
+  function updateContent(translations) {
+    // Update meta tags and title for SEO
+    if (translations.meta_title) {
+      document.title = translations.meta_title;
+    }
+    if (translations.meta_description) {
+      const descriptionTag = document.querySelector('meta[name="description"]');
+      if (descriptionTag) {
+        descriptionTag.setAttribute('content', translations.meta_description);
+      }
+    }
+    if (translations.meta_keywords) {
+      const keywordsTag = document.querySelector('meta[name="keywords"]');
+      if (keywordsTag) {
+        keywordsTag.setAttribute('content', translations.meta_keywords);
+      }
+    }
+
+    // Update elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      let key = element.getAttribute('data-i18n');
+      let attr = 'innerHTML'; // Default attribute
+
+      if (key.startsWith('[') && key.includes(']')) {
+        const parts = key.split(']');
+        attr = parts[0].substring(1); // e.g., "placeholder" or "title"
+        key = parts[1]; // the actual translation key
+      }
+
+      if (translations[key]) {
+        if (attr === 'innerHTML') {
+          element.innerHTML = translations[key];
+        } else {
+          element.setAttribute(attr, translations[key]);
+        }
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const langSwitcher = document.querySelector('#lang-switcher');
+    if (langSwitcher) {
+      langSwitcher.addEventListener('click', () => {
+        const currentLang = localStorage.getItem('language') || defaultLang;
+        const newLang = currentLang === 'ar' ? 'en' : 'ar';
+        setLanguage(newLang);
+      });
+    }
+
+    const savedLang = localStorage.getItem('language');
+    setLanguage(savedLang || defaultLang);
+  });
+
 })();

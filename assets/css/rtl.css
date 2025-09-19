@@ -1,0 +1,100 @@
+/* RTL Overrides */
+
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .header .topbar .contact-info i {
+  margin-left: 1.5rem;
+  margin-right: 0;
+}
+
+[dir="rtl"] .header .topbar .contact-info i.ms-4 {
+  margin-left: 0 !important;
+  margin-right: 1.5rem !important;
+}
+
+[dir="rtl"] .header .topbar .social-links a {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+[dir="rtl"] .header .logo img {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+[dir="rtl"] .navmenu ul {
+  padding-right: 0;
+}
+
+[dir="rtl"] .navmenu a i,
+[dir="rtl"] .navmenu a:focus i {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+[dir="rtl"] .navmenu>ul>li>a:before {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .mobile-nav-toggle {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+[dir="rtl"] .about .content {
+  padding-right: 0;
+  padding-left: 20px;
+}
+
+[dir="rtl"] .about .image-wrapper {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+[dir="rtl"] .about .image-wrapper .floating-card {
+  left: auto;
+  right: -20px;
+}
+
+[dir="rtl"] .featured-services .services-content .btn-consultation span {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+[dir="rtl"] .featured-services .services-content .btn-consultation i,
+[dir="rtl"] .services .service-card .btn-cta i,
+[dir="rtl"] .how-we-work .step-card .step-arrow i {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .how-we-work .step-card .step-arrow {
+  right: auto;
+  left: -15px;
+}
+
+[dir="rtl"] .contact .contact-form-container h3 {
+  padding-left: 0;
+  padding-right: 15px;
+}
+
+[dir="rtl"] .contact .contact-form-container h3:before {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .footer .social-links a {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+[dir="rtl"] .footer .footer-links ul i {
+  padding-right: 0;
+  padding-left: 2px;
+}
+
+[dir="rtl"] .footer .footer-contact.text-md-start {
+  text-align: right !important;
+}
