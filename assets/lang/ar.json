@@ -21,7 +21,7 @@
   "hero_stat_1_label": "مشروع مكتمل",
   "hero_stat_2_num": "98%",
   "hero_stat_2_label": "رضا العملاء",
-  "hero_stat_3_num": "+10",
+  "hero_stat_3_num": "24/7",
   "hero_stat_3_label": "سنوات من الخبرة",
   "hero_feature_1": "آمن وموثوق",
   "hero_feature_2": "فريق من الخبراء",
@@ -274,6 +274,7 @@
   "service_details_info_delivery_value": "تقارير نصف أسبوعية",
   "service_details_info_support_label": "الدعم:",
   "service_details_info_support_value": "مراقبة 24/7",
+  "service_details_info1_support_value": "24/7",
   "service_details_contact_title": "هل تحتاج إلى مساعدة؟",
   "service_details_contact_p": "تواصل معنا الآن للحصول على استشارة مجانية.",
   "service_details_contact_phone": "+966 56 282 4104",
@@ -342,7 +343,8 @@
   "team_member1_name": "أحمد المصري",
   "team_member1_role": "أخصائي تسويق",
   "team_member1_desc": "خبير في استراتيجيات التسويق الرقمي ونمو العلامات التجارية عبر الإنترنت.",
-  "team_member2_name": "سارة خالد",
+  "team_member2_name": "محمد خالد",
+  "team_member3_name": "رامي محمد",
   "team_member2_role": "مصممة واجهات مستخدم",
   "team_member2_desc": "مبدعة في تحويل الأفكار إلى تصميمات جذابة وسهلة الاستخدام تلبي احتياجات المستخدمين."
 }

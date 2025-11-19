@@ -79,7 +79,7 @@
           <ul>
             <li><a href="#hero" class="active" data-i18n="nav_home">الرئيسية</a></li>
             <li><a href="#about" data-i18n="nav_about">عن الشركة</a></li>
-            <li><a href="#services" data-i18n="nav_services">خدماتنا</a></li>
+            <li><a href="#featured-services" data-i18n="nav_services">خدماتنا</a></li>
             <li><a href="#portfolio" data-i18n="nav_portfolio">أعمالنا</a></li>
             <li><a href="#team" data-i18n="nav_team">فريقنا</a></li>
             <li><a href="#contact" data-i18n="nav_contact">اتصل بنا</a></li>
@@ -125,7 +125,7 @@
                   <span class="stat-label" data-i18n="hero_stat_2_label">رضا العملاء</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number" data-i18n="hero_stat_3_num">+10</span>
+                  <span class="stat-number" data-i18n="about_stat_1_num">+8</span>
                   <span class="stat-label" data-i18n="hero_stat_3_label">سنوات من الخبرة</span>
                 </div>
               </div>
@@ -560,24 +560,9 @@
 
     </section><!-- /How We Work Section -->
 
-    <!-- Features Section -->
-    <section id="features" class="features section">
-
-      <div class="container">
-
-
-
-      </div>
-    </section><!-- /Features Section -->
-
     <!-- Services Section -->
     <section id="services" class="services section light-background">
-
-   
       <div class="container">
-
-
-
         <div class="stats-highlight" data-aos="zoom-in">
           <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -611,6 +596,75 @@
 
     </section><!-- /Services Section -->
     
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Select counters from both "About" and "Services" sections
+        const counters = document.querySelectorAll('#about .number, #services .stat-number');
+        const speed = 200; // The lower the slower
+    
+        const animateCounter = (counter) => {
+          const text = counter.innerText;
+          // Regex to extract number, prefix, and suffix
+          const match = text.match(/^([^\d]*)(\d+)(.*)$/);
+    
+          if (!match) {
+            // If it's not a simple number (like 24/7), just keep it as is.
+            return;
+          }
+    
+          const prefix = match[1] || '';
+          const target = +match[2];
+          const suffix = match[3] || '';
+    
+          const updateCount = () => {
+            const inc = target / speed;
+            const count = +counter.getAttribute('data-count') || 0;
+            const newCount = Math.ceil(count + inc);
+    
+            if (newCount < target) {
+              counter.innerText = prefix + newCount + suffix;
+              counter.setAttribute('data-count', newCount);
+              requestAnimationFrame(updateCount);
+            } else {
+              counter.innerText = prefix + target + suffix;
+            }
+          };
+          updateCount();
+        };
+    
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              // Use a more generic selector to find counters in the observed section
+              const countersInSection = entry.target.querySelectorAll('.number, .stat-number');
+              countersInSection.forEach(counter => {
+                // Check if it has already been animated
+                if (!counter.hasAttribute('data-animated')) {
+                  animateCounter(counter); // Animate the counter
+                  counter.setAttribute('data-animated', 'true'); // Mark as animated
+                }
+              });
+              // Optional: unobserve after animation to save resources
+              // observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.5 // Trigger when 50% of the section is visible
+        });
+    
+        // Observe both sections that contain counters
+        const statsSectionServices = document.querySelector('#services .stats-highlight');
+        if (statsSectionServices) {
+          observer.observe(statsSectionServices);
+        }
+    
+        const statsSectionAbout = document.querySelector('#about .stats-container');
+        if (statsSectionAbout) {
+          observer.observe(statsSectionAbout);
+        }
+      });
+    </script>
+
     <!-- Faq Section -->
     <section id="faq" class="faq section">
 
@@ -934,31 +988,40 @@ o
           <script type="application/json" class="swiper-config">
             {
               "loop": true,
+              "loopAddBlankSlides": true,
               "speed": 800,
               "autoplay": {
-                "delay": 5000
+                "delay": 5000,
+                "disableOnInteraction": false
               },
               "centeredSlides": true,
-              "slidesPerView": 1,
-              "spaceBetween": 30,
+              "slidesPerView": "auto",
+              "spaceBetween": 40,
               "pagination": {
                 "el": ".swiper-pagination",
                 "type": "bullets",
-                "clickable": true
+                "clickable": true,
+                "dynamicBullets": true
               },
               "navigation": {
                 "nextEl": ".swiper-button-next",
                 "prevEl": ".swiper-button-prev"
               },
               "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 20
+                },
                 "576": {
-                  "slidesPerView": 2
+                  "slidesPerView": 2,
+                  "spaceBetween": 20
                 },
                 "992": {
-                  "slidesPerView": 3
+                  "slidesPerView": 3,
+                  "spaceBetween": 30
                 },
                 "1200": {
-                  "slidesPerView": 4
+                  "spaceBetween": 40
                 }
               }
             }
@@ -1002,12 +1065,40 @@ o
                   </div>
                 </div>
                 <div class="team-content">
-                  <h3 data-i18n="team_member2_name">سارة خالد</h3>
+                  <h3 data-i18n="team_member2_name">محمد خالد</h3>
                   <span data-i18n="team_member2_role">مصممة واجهات مستخدم</span>
                   <p data-i18n="team_member2_desc">مبدعة في تحويل الأفكار إلى تصميمات جذابة وسهلة الاستخدام تلبي احتياجات المستخدمين.</p>
                 </div>
               </div><!-- End Team Card -->
-            </div><!-- End slide item -->
+            </div>
+
+            <div class="swiper-slide">
+              <div class="team-card">
+                <div class="team-image">
+                  <img src="assets/img/person/person-m-9.webp" class="img-fluid" alt="سارة خالد - مصممة واجهات مستخدم"
+                    loading="lazy">
+                  <div class="team-overlay">
+                    <div class="social-links">
+                      <a href="#"><i class="bi bi-twitter-x"></i></a>
+                      <a href="#"><i class="bi bi-facebook"></i></a>
+                      <a href="#"><i class="bi bi-instagram"></i></a>
+                      <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="team-content">
+                  <h3 data-i18n="team_member3_name">رامي محمد</h3>
+                  <span data-i18n="team_member2_role">مصممة واجهات مستخدم</span>
+                  <p data-i18n="team_member2_desc">مبدعة في تحويل الأفكار إلى تصميمات جذابة وسهلة الاستخدام تلبي احتياجات المستخدمين.</p>
+                </div>
+              </div><!-- End Team Card -->
+            </div>
+
+
+
+
+
+            <!-- End slide item -->
 
           </div>
           <div class="swiper-pagination"></div>
@@ -1115,7 +1206,7 @@ o
           <ul>
             <li><a href="index.html#hero" data-i18n="footer_link_home">الرئيسية</a></li>
             <li><a href="index.html#about" data-i18n="footer_link_about">عن الشركة</a></li>
-            <li><a href="index.html#services" data-i18n="footer_link_services">الخدمات</a></li>
+            <li><a href="index.html#featured-services" data-i18n="footer_link_services">الخدمات</a></li>
             <li><a href="terms.html" data-i18n="footer_link_terms">شروط الخدمة</a></li>
             <li><a href="privacy.html" data-i18n="footer_link_privacy">سياسة الخصوصية</a></li>
           </ul>

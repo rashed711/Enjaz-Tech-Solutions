@@ -3833,6 +3833,19 @@ section,
   }
 }
 
+.team .team-slider .swiper-slide {
+  width: 300px;
+  height: auto;
+}
+
+@media (max-width: 576px) {
+  .team .team-slider .swiper-slide {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/

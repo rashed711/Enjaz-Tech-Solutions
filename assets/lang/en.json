@@ -21,7 +21,7 @@
   "hero_stat_1_label": "Completed Projects",
   "hero_stat_2_num": "98%",
   "hero_stat_2_label": "Client Satisfaction",
-  "hero_stat_3_num": "+10",
+  "hero_stat_3_num": "24/7",
   "hero_stat_3_label": "Years of Experience",
   "hero_feature_1": "Secure & Reliable",
   "hero_feature_2": "Expert Team",
@@ -342,7 +342,8 @@
   "team_member1_name": "Ahmed El-Masry",
   "team_member1_role": "Marketing Specialist",
   "team_member1_desc": "An expert in digital marketing strategies and online brand growth.",
-  "team_member2_name": "Sarah Khaled",
+  "team_member2_name": "Mohamed Khaled",
+  "team_member3_name": "Ramy Mohamed",
   "team_member2_role": "UI/UX Designer",
   "team_member2_desc": "Creative in turning ideas into attractive and user-friendly designs that meet user needs."
 }
