@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://enjaz.app/sitemap.xml
