@@ -8,6 +8,13 @@ test.describe('اختبارات الصفحة الرئيسية', () => {
     // الانتقال إلى الصفحة الرئيسية قبل كل اختبار
     // نفترض أن الموقع يعمل على خادم محلي على المنفذ 3000. قم بتعديل الرابط إذا لزم الأمر
     await page.goto('http://localhost:3000');
+    // حاول التبديل إلى اللغة الإنجليزية إن كان عنصر التبديل موجوداً
+    const switcher = page.locator('#lang-switcher');
+    if (await switcher.count() > 0) {
+      await switcher.click();
+      // انتظار تحديث العنوان بعد تحميل ترجمة en.json
+      await page.waitForFunction((expected) => document.title === expected, en.meta_title, { timeout: 5000 });
+    }
   });
 
   test('يجب أن يكون عنوان الصفحة صحيحاً', async ({ page }) => {
@@ -22,8 +29,8 @@ test.describe('اختبارات الصفحة الرئيسية', () => {
   });
 
   test('يجب الانتقال إلى قسم "من نحن" عند النقر على رابط التنقل', async ({ page }) => {
-    // البحث عن رابط "About Us" في شريط التنقل والنقر عليه
-    await page.getByRole('link', { name: en.nav_about }).click();
+    // البحث عن رابط "About Us" داخل شريط التنقل (#navmenu) والنقر عليه
+    await page.locator('#navmenu').getByRole('link', { name: en.nav_about }).click();
     
     // انتظار تغيير الرابط ليحتوي على #about
     await page.waitForURL('**/#about');
