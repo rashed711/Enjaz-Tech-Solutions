@@ -2676,6 +2676,88 @@ section,
   overflow: hidden;
 }
 
+/* Responsive & accessibility improvements for Services cards */
+@media (max-width: 991.98px) {
+  .services .service-card {
+    padding: 28px 20px;
+    border-radius: 14px;
+  }
+
+  .services .service-card.compact {
+    padding: 22px 18px;
+  }
+
+  .services .service-card .service-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+  }
+
+  .services .service-card .service-content h3 {
+    font-size: 20px;
+  }
+
+  .services .service-card .btn-cta {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .services .service-card {
+    padding: 20px 14px;
+    border-radius: 12px;
+  }
+
+  .services .service-card .service-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 18px;
+  }
+
+  .services .service-card .service-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .services .service-card .service-content p {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  /* Make CTA full-width on small screens for better tap targets */
+  .services .service-card .btn-cta {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 12px 16px;
+    border-radius: 10px;
+  }
+
+  .services .service-card .service-meta {
+    gap: 10px;
+  }
+}
+
+/* Reduce hover translations on touch devices and use focus for accessibility */
+@media (hover: none) {
+  .services .service-card:hover {
+    transform: none;
+    box-shadow: 0 12px 30px color-mix(in srgb, var(--heading-color), transparent 92%);
+  }
+
+  .services .service-card:hover .service-bg {
+    opacity: 0;
+    transform: none;
+  }
+}
+
+.services .service-card:focus-within {
+  outline: 3px solid color-mix(in srgb, var(--accent-color), transparent 75%);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px color-mix(in srgb, var(--accent-color), transparent 85%);
+}
+
 .services .stats-highlight::before {
   content: "";
   position: absolute;
@@ -3678,6 +3760,27 @@ section,
 
 .portfolio .portfolio-wrap:hover .portfolio-info {
   opacity: 1;
+}
+
+/* Smooth filtering state for Isotope */
+.isotope-layout.isotope-filtering .portfolio-container .isotope-item {
+  transition: transform 0.6s cubic-bezier(.2,.8,.2,1), opacity 0.6s cubic-bezier(.2,.8,.2,1);
+}
+
+/* Slight dim / disabled pointer during active filtering to indicate transition */
+.isotope-layout.isotope-filtering .portfolio-container {
+  pointer-events: none;
+}
+
+/* Ensure links inside items are still focusable during transition */
+.isotope-layout.isotope-filtering .portfolio-container .portfolio-links a {
+  pointer-events: auto;
+}
+
+/* Improved active filter visual */
+.portfolio .portfolio-filters li.filter-active {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--accent-color), transparent 85%);
 }
 
 /*--------------------------------------------------------------

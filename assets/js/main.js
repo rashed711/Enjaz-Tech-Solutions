@@ -141,25 +141,52 @@
 
     let initIsotope;
     imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+      // initialize isotope with smooth transition and custom show/hide styles
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
         filter: filter,
-        sortBy: sort
+        sortBy: sort,
+        transitionDuration: '0.6s',
+        hiddenStyle: { opacity: 0, transform: 'scale(0.98) translateY(10px)' },
+        visibleStyle: { opacity: 1, transform: 'scale(1) translateY(0)' }
       });
-    });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        if (typeof aosInit === 'function') {
-          aosInit();
+      // Attach filter handlers after isotope is ready to avoid race conditions
+      isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
+        // accessibility: make filters keyboard focusable and announceable
+        filters.setAttribute('role', 'button');
+        filters.setAttribute('tabindex', '0');
+
+        function applyFilter(evt) {
+          const active = isotopeItem.querySelector('.isotope-filters .filter-active');
+          if (active) active.classList.remove('filter-active');
+          filters.classList.add('filter-active');
+
+          // add a temporary class for CSS animations during filtering
+          isotopeItem.classList.add('isotope-filtering');
+
+          initIsotope.arrange({ filter: filters.getAttribute('data-filter') });
+
+          // reinitialize AOS so revealed items animate
+          if (typeof aosInit === 'function') {
+            aosInit();
+          }
+
+          // remove the filtering class after transition completes
+          setTimeout(function() {
+            isotopeItem.classList.remove('isotope-filtering');
+          }, 700);
         }
-      }, false);
+
+        filters.addEventListener('click', applyFilter, false);
+        filters.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            applyFilter(e);
+          }
+        });
+      });
     });
 
   });
