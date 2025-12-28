@@ -48,6 +48,7 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
     <link href="assets/css/rtl.css" rel="stylesheet">
+
     <!-- Clarity -->
     <script type="text/javascript">
         (function (c, l, a, r, i, t, y) {
@@ -56,296 +57,346 @@
             y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "uekxfktiui");
     </script>
-    <!-- Clarity -->
 </head>
 
-<body class="starter-page-page">
+<body class="starter-page-page email-landing-page">
 
+    <!-- Simplify Header for Landing Page Focus -->
     <header id="header" class="header fixed-top">
-
-        <div class="topbar d-flex align-items-center dark-background">
-            <div class="container d-flex justify-content-center justify-content-md-between">
-                <div class="contact-info d-flex align-items-center">
-                    <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@enjaz.app"
-                            data-i18n="contact_email">info@enjaz.app</a></i>
-                    <i class="bi bi-phone d-flex align-items-center ms-4"><a href="tel:+201225251888"
-                            data-i18n="[href]contact_phone_tel;contact_phone">01225251888</a></i>
-                </div>
-                <div class="social-links d-none d-md-flex align-items-center">
-                    <a href="https://www.facebook.com/Enjaz.Smart.Solutions" class="facebook" target="_blank"><i
-                            class="bi bi-facebook"></i></a>
-                    <a href="https://www.instagram.com/enjaz_smart_solutions" class="instagram" target="_blank"><i
-                            class="bi bi-instagram"></i></a>
-                </div>
-            </div>
-        </div><!-- End Top Bar -->
-
-        <div class="branding d-flex align-items-cente">
-
+        <div class="branding d-flex align-items-center">
             <div class="container position-relative d-flex align-items-center justify-content-between">
                 <a href="index.html" class="logo d-flex align-items-center">
                     <img src="assets/img/enjaz-logo-main.webp" alt="شعار إنجاز للحلول الذكية" width="70" height="70"
-                        class="img-fluid" loading="eager" decoding="async">
+                        class="img-fluid">
+                    <h1 class="d-none">إنجاز</h1>
                 </a>
 
                 <nav id="navmenu" class="navmenu">
                     <ul>
-                        <li><a href="index.html#hero" data-i18n="nav_home">الرئيسية</a></li>
-                        <li><a href="index.html#about" data-i18n="nav_about">عن الشركة</a></li>
-                        <li><a href="index.html#services" data-i18n="nav_services">خدماتنا</a></li>
-                        <li><a href="index.html#portfolio" data-i18n="nav_portfolio">أعمالنا</a></li>
-                        <li><a href="email-packages.html" class="active" data-i18n="email_packages_breadcrumb">باقات
-                                البريد</a></li>
-
-                        <li><a href="index.html#contact" data-i18n="nav_contact">اتصل بنا</a></li>
-                        <li><button type="button" id="lang-switcher" class="btn-primary"
-                                data-i18n="lang_switcher">English</button>
-                        </li>
+                        <li><a href="index.html" class="d-flex align-items-center"><i
+                                    class="bi bi-arrow-right ms-1"></i> العودة للرئيسية</a></li>
                     </ul>
-                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
-
             </div>
-
         </div>
-
     </header>
 
     <main class="main">
 
-        <!-- Page Title -->
-        <div class="page-title dark-background" style="background-image: url(assets/img/bg/bg-14.webp);">
-            <div class="container position-relative">
-                <h1 data-i18n="email_packages_page_title">باقات البريد الإلكتروني</h1>
-                <p data-i18n="email_packages_page_subtitle">اختر الباقة المناسبة لأعمالك وابدأ في بناء هوية رقمية
-                    احترافية.</p>
-                <nav class="breadcrumbs">
-                    <ol>
-                        <li><a href="index.html" data-i18n="nav_home">الرئيسية</a></li>
-                        <li class="current" data-i18n="email_packages_breadcrumb">باقات البريد الإلكتروني</li>
-                    </ol>
-                </nav>
+        <!-- Hero Section -->
+        <section id="hero-email" class="hero-email section dark-background">
+            <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-10">
+                        <span class="badge badge-subtle mb-3">ابدأ رحلة الاحترافية</span>
+                        <h1 class="display-4 fw-bold mb-4">امنح أعمالك الثقة التي تستحقها مع <span
+                                class="text-accent">بريد إلكتروني رسمي</span></h1>
+                        <p class="lead mb-5 opacity-75">توقف عن استخدام البريد المجاني وابدأ التواصل مع عملائك بهوية
+                            تجارية موثوقة وآمنة. (name@yourcomany.com)</p>
+                        <div class="d-flex gap-3 justify-content-center flex-wrap">
+                            <a href="#pricing" class="btn-get-started pulse-effect">اشترك الآن <i
+                                    class="bi bi-arrow-down short"></i></a>
+                            <a href="https://wa.me/201225251888" target="_blank" class="btn-outline-white"><i
+                                    class="bi bi-whatsapp"></i> تواصل مع المبيعات</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div><!-- End Page Title -->
 
-        <!-- Email Services Introduction Section -->
-        <section id="email-services-intro" class="section">
-            <div class="container text-center" data-aos="fade-up">
-                <h2 class="mb-4" data-i18n="email_services_intro_title">لماذا تختار بريد إلكتروني احترافي؟</h2>
-                <p class="lead mx-auto" style="max-width: 800px;" data-i18n="email_services_intro_desc">
-                    يُعد البريد الإلكتروني الاحترافي (email@yourbusiness.com) ركيزة أساسية لبناء هوية رقمية موثوقة. على
-                    عكس البريد المجاني، يمنحك البريد المخصص مظهراً احترافياً يعزز ثقة العملاء بعلامتك التجارية، ويوفر
-                    مستويات أعلى من الأمان والتحكم في البيانات، مما يجعله خياراً لا غنى عنه للأفراد والشركات الطموحة.
-                </p>
+            <!-- Abstract Background Elements -->
+            <div class="shape-1"></div>
+            <div class="shape-2"></div>
+        </section>
+
+        <!-- Trust / Benefits Strip -->
+        <section class="trust-strip py-4 light-background border-bottom">
+            <div class="container">
+                <div class="row text-center g-4 justify-content-center">
+                    <div class="col-6 col-md-3 d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-shield-check text-accent fs-4"></i>
+                        <span class="fw-bold">حماية متقدمة</span>
+                    </div>
+                    <div class="col-6 col-md-3 d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-headset text-accent fs-4"></i>
+                        <span class="fw-bold">دعم فني 24/7</span>
+                    </div>
+                    <div class="col-6 col-md-3 d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-hdd-network text-accent fs-4"></i>
+                        <span class="fw-bold">ضمان عمل 99.9%</span>
+                    </div>
+                    <div class="col-6 col-md-3 d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-phone text-accent fs-4"></i>
+                        <span class="fw-bold">يعمل على الموبايل</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem vs Solution Section -->
+        <section id="why-upgrade" class="section">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title text-center">
+                    <h2>لماذا تحتاج إلى بريد احترافي؟</h2>
+                    <p>الفرق بين البريد المجاني والبريد الاحترافي قد يكلفك ثقة عملائك</p>
+                </div>
+
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-6 order-2 order-lg-1">
+                        <div class="comparison-card bad-card mb-4" data-aos="fade-right" data-aos-delay="100">
+                            <div class="card-header-status text-danger"><i class="bi bi-x-circle-fill"></i> البريد
+                                المجاني (Gmail/Yahoo)</div>
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-x text-danger"></i> <strong>يبدو غير احترافي:</strong>
+                                        yourname123@gmail.com</li>
+                                    <li><i class="bi bi-x text-danger"></i> <strong>شكوك العملاء:</strong> قد يعتقد
+                                        العميل أن شركتك وهمية.</li>
+                                    <li><i class="bi bi-x text-danger"></i> <strong>أمان أقل:</strong> بياناتك وتفاصيل
+                                        عملك موجودة على خوادم عامة.</li>
+                                    <li><i class="bi bi-x text-danger"></i> <strong>تحكم محدود:</strong> لا يمكنك إدارة
+                                        صلاحيات الموظفين.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2">
+                        <div class="comparison-card good-card featured" data-aos="fade-left" data-aos-delay="200">
+                            <div class="card-header-status text-success"><i class="bi bi-check-circle-fill"></i> بريد
+                                إنجاز الاحترافي</div>
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li><i class="bi bi-check-lg text-success"></i> <strong>هوية قوية:</strong>
+                                        sales@yourcompany.com</li>
+                                    <li><i class="bi bi-check-lg text-success"></i> <strong>ثقة فورية:</strong> يعكس حجم
+                                        واحترافية مؤسستك.</li>
+                                    <li><i class="bi bi-check-lg text-success"></i> <strong>خصوصية كاملة:</strong>
+                                        بياناتك ملك لك وحدك مشفرة ومحمية.</li>
+                                    <li><i class="bi bi-check-lg text-success"></i> <strong>تحكم كامل:</strong> لوحة
+                                        تحكم لإدارة حسابات الموظفين بسهولة.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Pricing Section -->
-        <section id="pricing" class="pricing section">
-
-            <div class="container">
-
-                <div class="row gy-4">
-
-                    <!-- Basic Plan -->
-                    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="pricing-item">
-                            <h3 data-i18n="pricing_basic_title">الباقة الأساسية</h3>
-                            <div class="price">
-                                <sup data-i18n="currency_symbol">ج.م</sup>800<span data-i18n="per_year">سنوياً</span>
-                            </div>
-                            <div class="capacity">
-                                1 <span data-i18n="unit_gb">GB</span>
-                            </div>
-                            <ul>
-                                <li><i class="bi bi-check"></i> <span data-i18n="pricing_feature_space_1gb">مساحة 1
-                                        GB</span></li>
-                                <li><i class="bi bi-check"></i> <span
-                                        data-i18n="pricing_feature_unlimited_emails">إيميلات لا محدودة</span></li>
-                                <li><i class="bi bi-check"></i> <span data-i18n="pricing_feature_antivirus">حماية
-                                        فيروسات</span></li>
-                                <li><i class="bi bi-check"></i> <span data-i18n="pricing_feature_support">دعم فني</span>
-                                </li>
-                            </ul>
-                            <a href="https://wa.me/201225251888?text=أنا مهتم بالاشتراك في الباقة الأساسية للبريد الإلكتروني"
-                                target="_blank" class="btn-buy" data-i18n="pricing_btn_subscribe">اشترك الآن</a>
-                        </div>
-                    </div><!-- End Pricing Item -->
-
-                    <!-- Comprehensive Plan -->
-                    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="pricing-item featured">
-                            <span class="popular" data-i18n="pricing_popular">الأكثر طلباً</span>
-                            <h3 data-i18n="pricing_comprehensive_title">الباقة الشاملة</h3>
-                            <div class="price">
-                                <sup data-i18n="currency_symbol">ج.م</sup>2000<span data-i18n="per_year">سنوياً</span>
-                            </div>
-                            <div class="capacity">
-                                5 <span data-i18n="unit_gb">GB</span>
-                            </div>
-                            <ul>
-                                <li><i class="bi bi-check"></i> <span data-i18n="pricing_feature_space_5gb">مساحة 5
-                                        GB</span></li>
-                                <li><i class="bi bi-check"></i> <span
-                                        data-i18n="pricing_feature_unlimited_emails">إيميلات لا محدودة</span></li>
-                                <li><i class="bi bi-check"></i> <span data-i18n="pricing_feature_spam_filter">Spam
-                                        Filter متطور</span></li>
-                                <li><i class="bi bi-check"></i> <span data-i18n="pricing_feature_priority_support">دعم
-                                        أولوية</span></li>
-                            </ul>
-                            <a href="https://wa.me/201225251888?text=أنا مهتم بالاشتراك في الباقة الشاملة للبريد الإلكتروني"
-                                target="_blank" class="btn-buy" data-i18n="pricing_btn_subscribe">اشترك الآن</a>
-                        </div>
-                    </div><!-- End Pricing Item -->
-
-                    <!-- Corporate Plan -->
-                    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="pricing-item">
-                            <h3 data-i18n="pricing_corporate_title">باقة الشركات</h3>
-                            <div class="price">
-                                <sup data-i18n="currency_symbol">ج.م</sup>4000<span data-i18n="per_year">سنوياً</span>
-                            </div>
-                            <div class="capacity">
-                                10 <span data-i18n="unit_gb">GB</span>
-                            </div>
-                            <ul>
-                                <li><i class="bi bi-check"></i> <span data-i18n="pricing_feature_space_10gb">مساحة 10
-                                        GB</span></li>
-                                <li><i class="bi bi-check"></i> <span
-                                        data-i18n="pricing_feature_unlimited_emails">إيميلات لا محدودة</span></li>
-                                <li><i class="bi bi-check"></i> <span data-i18n="pricing_feature_cpanel">لوحة تحكم
-                                        كاملة</span></li>
-                                <li><i class="bi bi-check"></i> <span data-i18n="pricing_feature_uptime">ضمان
-                                        99.9%</span></li>
-                            </ul>
-                            <a href="https://wa.me/201225251888?text=أنا مهتم بالاشتراك في باقة الشركات للبريد الإلكتروني"
-                                target="_blank" class="btn-buy" data-i18n="pricing_btn_subscribe">اشترك الآن</a>
-                        </div>
-                    </div><!-- End Pricing Item -->
-
-                    <!-- Ultra Plan -->
-                    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="pricing-item">
-                            <h3 data-i18n="pricing_ultra_title">باقة الترا</h3>
-                            <div class="price">
-                                <sup data-i18n="currency_symbol">ج.م</sup>5000<span data-i18n="per_year">سنوياً</span>
-                            </div>
-                            <div class="capacity">
-                                20 <span data-i18n="unit_gb">GB</span>
-                            </div>
-                            <ul>
-                                <li><i class="bi bi-check"></i> <span data-i18n="pricing_feature_space_20gb">مساحة 20
-                                        GB</span></li>
-                                <li><i class="bi bi-check"></i> <span
-                                        data-i18n="pricing_feature_unlimited_emails">إيميلات لا محدودة</span></li>
-                                <li><i class="bi bi-check"></i> <span data-i18n="pricing_feature_high_speed">أداء عالي
-                                        السرعة</span></li>
-                                <li><i class="bi bi-check"></i> <span data-i18n="pricing_feature_free_transfer">نقل
-                                        مجاني</span></li>
-                            </ul>
-                            <a href="https://wa.me/201225251888?text=أنا مهتم بالاشتراك في باقة الترا للبريد الإلكتروني"
-                                target="_blank" class="btn-buy" data-i18n="pricing_btn_subscribe">اشترك الآن</a>
-                        </div>
-                    </div><!-- End Pricing Item -->
-
-                    <!-- Pro Plan -->
-                    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
-                        <div class="pricing-item">
-                            <h3 data-i18n="pricing_pro_title">باقة برو</h3>
-                            <div class="price">
-                                <sup data-i18n="currency_symbol">ج.م</sup>12000<span data-i18n="per_year">سنوياً</span>
-                            </div>
-                            <div class="capacity">
-                                50 <span data-i18n="unit_gb">GB</span>
-                            </div>
-                            <ul>
-                                <li><i class="bi bi-check"></i> <span data-i18n="pricing_feature_space_50gb">مساحة 50
-                                        GB</span></li>
-                                <li><i class="bi bi-check"></i> <span
-                                        data-i18n="pricing_feature_unlimited_emails">إيميلات لا محدودة</span></li>
-                                <li><i class="bi bi-check"></i> <span data-i18n="pricing_feature_vps">سيرفر خاص
-                                        VPS</span></li>
-                                <li><i class="bi bi-check"></i> <span data-i18n="pricing_feature_account_manager">مدير
-                                        حساب</span></li>
-                            </ul>
-                            <a href="https://wa.me/201225251888?text=أنا مهتم بالاشتراك في باقة برو للبريد الإلكتروني"
-                                target="_blank" class="btn-buy" data-i18n="pricing_btn_subscribe">اشترك الآن</a>
-                        </div>
-                    </div><!-- End Pricing Item -->
-
+        <section id="pricing" class="pricing section light-background">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title text-center mb-5">
+                    <h2>باقات تناسب الجميع</h2>
+                    <p>اختر الخطة المثالية لحجم أعمالك، لا مصاريف خفية، تجديد سنوي سهل.</p>
                 </div>
 
-            </div>
+                <div class="row gy-4 justify-content-center">
+                    <!-- Basic Plan -->
+                    <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="pricing-card">
+                            <div class="plan-header">
+                                <h3>الباقة الأساسية</h3>
+                                <div class="price">
+                                    <span class="currency">ج.م</span>
+                                    <span class="amount">800</span>
+                                    <span class="period">/ سنوياً</span>
+                                </div>
+                            </div>
+                            <div class="plan-features">
+                                <ul>
+                                    <li><i class="bi bi-hdd-fill"></i> مساحة <strong>1 GB</strong></li>
+                                    <li><i class="bi bi-envelope-fill"></i> إيميلات <strong>لا محدودة</strong></li>
+                                    <li><i class="bi bi-shield-check"></i> حماية أساسية</li>
+                                    <li><i class="bi bi-headset"></i> دعم فني</li>
+                                </ul>
+                            </div>
+                            <div class="plan-footer">
+                                <a href="https://wa.me/201225251888?text=أنا مهتم بالاشتراك في الباقة الأساسية وزيادة مبيعاتي"
+                                    class="btn-select">اشترك الآن</a>
+                            </div>
+                        </div>
+                    </div>
 
-        </section><!-- /Pricing Section -->
+                    <!-- Recommended Plan -->
+                    <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="pricing-card popular">
+                            <div class="popular-badge">الأكثر طلباً</div>
+                            <div class="plan-header">
+                                <h3>الباقة الشاملة</h3>
+                                <div class="price">
+                                    <span class="currency">ج.م</span>
+                                    <span class="amount">2000</span>
+                                    <span class="period">/ سنوياً</span>
+                                </div>
+                            </div>
+                            <div class="plan-features">
+                                <ul>
+                                    <li><i class="bi bi-hdd-fill"></i> مساحة <strong>5 GB</strong></li>
+                                    <li><i class="bi bi-envelope-fill"></i> إيميلات <strong>لا محدودة</strong></li>
+                                    <li><i class="bi bi-shield-lock-fill"></i> فلتر Spam متطور</li>
+                                    <li><i class="bi bi-lightning-fill"></i> دعم فني أولوية</li>
+                                </ul>
+                            </div>
+                            <div class="plan-footer">
+                                <a href="https://wa.me/201225251888?text=أنا مهتم بـ (الباقة الشاملة) الأكثر طلباً للشركات"
+                                    class="btn-select btn-primary-glow">اشترك الآن</a>
+                            </div>
+                        </div>
+                    </div>
 
-    </main>
-
-    <footer id="footer" class="footer position-relative dark-background">
-
-        <div class="container footer-top">
-            <div class="row gy-4">
-                <div class="col-lg-5 col-md-12 footer-about">
-                    <a href="index.html" class="logo d-flex align-items-center">
-                        <span class="sitename" data-i18n="footer_sitename">إنجاز</span>
-                    </a>
-                    <p data-i18n="footer_about_text">إنجاز للحلول الذكية، شريكك الموثوق للابتكار الرقمي. نقدم حلولاً
-                        متكاملة
-                        تساعدك على تحقيق أهدافك والتميز في عالم الأعمال.</p>
-                    <div class="social-links d-flex mt-4">
-                        <a href="https://www.facebook.com/Enjaz.Smart.Solutions" target="_blank"><i
-                                class="bi bi-facebook"></i></a>
-                        <a href="https://www.instagram.com/enjaz_smart_solutions" target="_blank"><i
-                                class="bi bi-instagram"></i></a>
+                    <!-- Corporate Plan -->
+                    <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="pricing-card">
+                            <div class="plan-header">
+                                <h3>باقة الشركات</h3>
+                                <div class="price">
+                                    <span class="currency">ج.م</span>
+                                    <span class="amount">4000</span>
+                                    <span class="period">/ سنوياً</span>
+                                </div>
+                            </div>
+                            <div class="plan-features">
+                                <ul>
+                                    <li><i class="bi bi-hdd-fill"></i> مساحة <strong>10 GB</strong></li>
+                                    <li><i class="bi bi-envelope-fill"></i> إيميلات <strong>لا محدودة</strong></li>
+                                    <li><i class="bi bi-gear-wide-connected"></i> لوحة تحكم كاملة</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> ضمان 99.9%</li>
+                                </ul>
+                            </div>
+                            <div class="plan-footer">
+                                <a href="https://wa.me/201225251888?text=أنا مهتم بباقة الشركات للمؤسسات الكبيرة"
+                                    class="btn-select">اشترك الآن</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ultra Plan -->
+                    <div class="col-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="pricing-card">
+                            <div class="plan-header">
+                                <h3>باقة الترا</h3>
+                                <div class="price">
+                                    <span class="currency">ج.م</span>
+                                    <span class="amount">5000</span>
+                                    <span class="period">/ سنوياً</span>
+                                </div>
+                            </div>
+                            <div class="plan-features">
+                                <ul>
+                                    <li><i class="bi bi-hdd-fill"></i> مساحة <strong>20 GB</strong></li>
+                                    <li><i class="bi bi-envelope-fill"></i> إيميلات <strong>لا محدودة</strong></li>
+                                    <li><i class="bi bi-gear-wide-connected"></i> لوحة تحكم كاملة</li>
+                                    <li><i class="bi bi-lightning-fill"></i> سرعة فائقة</li>
+                                </ul>
+                            </div>
+                            <div class="plan-footer">
+                                <a href="https://wa.me/201225251888?text=أنا مهتم بباقة الترا" class="btn-select">اشترك
+                                    الآن</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-6 footer-links">
-                    <h4 data-i18n="footer_useful_links_title">روابط مهمة</h4>
-                    <ul>
-                        <li><a href="index.html#hero" data-i18n="footer_link_home">الرئيسية</a></li>
-                        <li><a href="index.html#about" data-i18n="footer_link_about">عن الشركة</a></li>
-                        <li><a href="index.html#services" data-i18n="footer_link_services">الخدمات</a></li>
-                        <li><a href="terms.html" data-i18n="footer_link_terms">شروط الخدمة</a></li>
-                        <li><a href="privacy.html" data-i18n="footer_link_privacy">سياسة الخصوصية</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-6 footer-links">
-                    <h4 data-i18n="footer_our_services_title">خدماتنا</h4>
-                    <ul>
-                        <li><a href="#" data-i18n="footer_service_1">تصميم الويب</a></li>
-                        <li><a href="email-packages.html" data-i18n="footer_service_3">خدمات البريد الإلكتروني</a></li>
-                        <li><a href="#" data-i18n="footer_service_4">التسويق</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                    <h4 data-i18n="footer_contact_us_title">تواصل معنا</h4>
-                    <p data-i18n="footer_address_line1">مكرم عبيد</p>
-                    <p data-i18n="footer_address_line2">مدينة نصر</p>
-                    <p data-i18n="footer_address_line3">القاهرة - مصر</p>
-                    <p class="mt-4"><strong data-i18n="footer_phone_label">الجوال:</strong> <span
-                            data-i18n="footer_phone_number">01225251888</span></p>
-                    <p><strong data-i18n="footer_email_label">البريد الإلكتروني:</strong> <span
-                            data-i18n="footer_email_address">info@enjaz.app</span></p>
+                <!-- High End Plan -->
+                <div class="row justify-content-center mt-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="col-lg-8">
+                        <div
+                            class="pricing-card horizontal-card d-md-flex align-items-center justify-content-between p-4">
+                            <div class="content mb-3 mb-md-0">
+                                <h3 class="mb-2">باقة المحترفين (VPS)</h3>
+                                <p class="mb-0 text-muted">للشركات الكبرى التي تحتاج موارد خاصة وسيرفر مستقل.</p>
+                                <div class="mt-2 text-accent fw-bold"><i class="bi bi-hdd-network"></i> 50 GB مساحة خاصة
+                                    + سيرفر مستقل</div>
+                            </div>
+                            <div class="action text-end">
+                                <div class="price mb-2">
+                                    <span class="amount fs-3">12,000</span> <span class="currency fs-5">ج.م</span>
+                                </div>
+                                <a href="https://wa.me/201225251888?text=استفسار بخصوص باقة المحترفين VPS"
+                                    class="btn-select px-4">تواصل للتفاصيل</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
-        </div>
+        </section>
 
-        <div class="container copyright text-center mt-4">
-            <p><span data-i18n="footer_copyright_prefix">© حقوق النشر</span> <strong class="px-1 sitename"
-                    data-i18n="footer_copyright_owner">إنجاز للحلول الذكية</strong> <span
-                    data-i18n="footer_copyright_suffix">جميع
-                    الحقوق محفوظة</span>
-            </p>
-            <div class="credits">
-                <span data-i18n="footer_credits_prefix">تصميم وبرمجة</span> <a href="https://enjaz.app/"
-                    data-i18n="footer_credits_designer">فريق إنجاز للحلول الذكية</a>
+        <!-- FAQ Section -->
+        <section id="faq" class="faq section">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title text-center">
+                    <h2>أسئلة شائعة</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        هل يمكنني فتح البريد على الموبايل؟
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        نعم، يمكنك ربط البريد الإلكتروني بسهولة بتطبيقات الموبايل (مثل Outlook أو تطبيق
+                                        البريد الافتراضي) على أندرويد و iOS.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        هل المساعدة الفنية متوفرة؟
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        بالتأكيد، فريق الدعم الفني لدينا جاهز لمساعدتك في إعداد البريد على أجهزتك وحل أي
+                                        مشكلة تواجهك.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        هل يمكنني ترقية الباقة لاحقاً؟
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        نعم، يمكنك الترقية إلى باقة أعلى في أي وقت وسيتم احتساب الفرق فقط.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
+        <!-- Final CTA -->
+        <section class="section dark-background text-center py-5">
+            <div class="container" data-aos="zoom-in">
+                <h3 class="mb-3">جاهز لنقل أعمالك للمستوى التالي؟</h3>
+                <p class="mb-4">لا تضيع الفرصة، ابدأ اليوم في بناء الثقة مع عملائك.</p>
+                <a href="https://wa.me/201225251888" class="btn-get-started pulse-effect px-5 py-3 fs-5">تواصل معنا الآن
+                    واتساب</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer position-relative dark-background pt-4 pb-4">
+        <div class="container copyright text-center">
+            <p><span data-i18n="footer_copyright_prefix">© حقوق النشر</span> <strong class="px-1 sitename">إنجاز للحلول
+                    الذكية</strong> <span>جميع الحقوق محفوظة</span></p>
+        </div>
     </footer>
 
     <!-- WhatsApp Float -->

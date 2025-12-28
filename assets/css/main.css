@@ -5864,3 +5864,743 @@ section,
     gap: 20px;
   }
 }
+/*--------------------------------------------------------------
+# Email Landing Page Styles
+--------------------------------------------------------------*/
+.hero-email {
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a3223 0%, #001f13 100%);
+  color: #fff;
+}
+
+.hero-email .badge-subtle {
+  background-color: rgba(18, 161, 107, 0.2);
+  color: #12a16b;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid rgba(18, 161, 107, 0.3);
+}
+
+.hero-email .text-accent {
+  color: #12a16b;
+}
+
+.hero-email .btn-get-started {
+  background: #12a16b;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(18, 161, 107, 0.4);
+}
+
+.hero-email .btn-get-started:hover {
+  background: #0e8c5c;
+  transform: translateY(-2px);
+}
+
+.hero-email .btn-outline-white {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.2);
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.hero-email .btn-outline-white:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,0.1);
+}
+
+.pulse-effect {
+  animation: pulse-shadow 2s infinite;
+}
+
+@keyframes pulse-shadow {
+  0% { box-shadow: 0 0 0 0 rgba(18, 161, 107, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(18, 161, 107, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(18, 161, 107, 0); }
+}
+
+/* Comparisons */
+.comparison-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  background: #fff;
+  transition: 0.3s;
+  height: 100%;
+}
+
+.comparison-card.bad-card .card-header-status {
+  background-color: #fde8e8;
+  padding: 15px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 1px solid #fbd5d5;
+}
+
+.comparison-card.good-card .card-header-status {
+  background-color: #def7ec;
+  padding: 15px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 1px solid #bcf0da;
+}
+
+.comparison-card.featured {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 2px solid #12a16b;
+}
+
+.comparison-card .card-body {
+  padding: 25px;
+}
+
+.comparison-card ul li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+/* Pricing Cards Redesign */
+.pricing-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: 0.3s;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card.popular {
+  border: 2px solid #12a16b;
+  transform: translateY(-10px);
+}
+
+.pricing-card .popular-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #12a16b;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.pricing-card .plan-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0a3223;
+  margin-bottom: 15px;
+}
+
+.pricing-card .price {
+  margin-bottom: 20px;
+  color: #12a16b;
+}
+
+.pricing-card .price .amount {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.pricing-card .price .period {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.pricing-card .plan-features {
+  flex-grow: 1;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-bottom: 25px;
+}
+
+.pricing-card .plan-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-card .plan-features ul li {
+  margin-bottom: 12px;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pricing-card .plan-features ul li i {
+  color: #12a16b;
+  font-size: 1.1rem;
+}
+
+.pricing-card .btn-select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #12a16b;
+  color: #12a16b;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.pricing-card .btn-select:hover {
+  background: #12a16b;
+  color: #fff;
+}
+
+.pricing-card.popular .btn-select {
+  background: #12a16b;
+  color: #fff;
+}
+
+.pricing-card.popular .btn-select:hover {
+  background: #0a7d51;
+}
+
+.pricing-card.horizontal-card {
+  text-align: right;
+  border: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+  .pricing-card.horizontal-card {
+    text-align: center;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Email Landing Page Styles
+--------------------------------------------------------------*/
+.hero-email {
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a3223 0%, #001f13 100%);
+  color: #fff;
+}
+
+.hero-email .badge-subtle {
+  background-color: rgba(18, 161, 107, 0.2);
+  color: #12a16b;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid rgba(18, 161, 107, 0.3);
+}
+
+.hero-email .text-accent {
+  color: #12a16b;
+}
+
+.hero-email .btn-get-started {
+  background: #12a16b;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(18, 161, 107, 0.4);
+}
+
+.hero-email .btn-get-started:hover {
+  background: #0e8c5c;
+  transform: translateY(-2px);
+}
+
+.hero-email .btn-outline-white {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.2);
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.hero-email .btn-outline-white:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,0.1);
+}
+
+.pulse-effect {
+  animation: pulse-shadow 2s infinite;
+}
+
+@keyframes pulse-shadow {
+  0% { box-shadow: 0 0 0 0 rgba(18, 161, 107, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(18, 161, 107, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(18, 161, 107, 0); }
+}
+
+/* Comparisons */
+.comparison-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  background: #fff;
+  transition: 0.3s;
+  height: 100%;
+}
+
+.comparison-card.bad-card .card-header-status {
+  background-color: #fde8e8;
+  padding: 15px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 1px solid #fbd5d5;
+}
+
+.comparison-card.good-card .card-header-status {
+  background-color: #def7ec;
+  padding: 15px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 1px solid #bcf0da;
+}
+
+.comparison-card.featured {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 2px solid #12a16b;
+}
+
+.comparison-card .card-body {
+  padding: 25px;
+}
+
+.comparison-card ul li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+/* Pricing Cards Redesign */
+.pricing-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: 0.3s;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card.popular {
+  border: 2px solid #12a16b;
+  transform: translateY(-10px);
+}
+
+.pricing-card .popular-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #12a16b;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.pricing-card .plan-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0a3223;
+  margin-bottom: 15px;
+}
+
+.pricing-card .price {
+  margin-bottom: 20px;
+  color: #12a16b;
+}
+
+.pricing-card .price .amount {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.pricing-card .price .period {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.pricing-card .plan-features {
+  flex-grow: 1;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-bottom: 25px;
+}
+
+.pricing-card .plan-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-card .plan-features ul li {
+  margin-bottom: 12px;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pricing-card .plan-features ul li i {
+  color: #12a16b;
+  font-size: 1.1rem;
+}
+
+.pricing-card .btn-select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #12a16b;
+  color: #12a16b;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.pricing-card .btn-select:hover {
+  background: #12a16b;
+  color: #fff;
+}
+
+.pricing-card.popular .btn-select {
+  background: #12a16b;
+  color: #fff;
+}
+
+.pricing-card.popular .btn-select:hover {
+  background: #0a7d51;
+}
+
+.pricing-card.horizontal-card {
+  text-align: right;
+  border: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+  .pricing-card.horizontal-card {
+    text-align: center;
+  }
+}
+
+
+
+
+/*--------------------------------------------------------------
+# Email Landing Page Styles
+--------------------------------------------------------------*/
+.hero-email {
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a3223 0%, #001f13 100%);
+  color: #fff;
+}
+
+.hero-email .badge-subtle {
+  background-color: rgba(18, 161, 107, 0.2);
+  color: #12a16b;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid rgba(18, 161, 107, 0.3);
+}
+
+.hero-email .text-accent {
+  color: #12a16b;
+}
+
+.hero-email .btn-get-started {
+  background: #12a16b;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(18, 161, 107, 0.4);
+}
+
+.hero-email .btn-get-started:hover {
+  background: #0e8c5c;
+  transform: translateY(-2px);
+}
+
+.hero-email .btn-outline-white {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.2);
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.hero-email .btn-outline-white:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,0.1);
+}
+
+.pulse-effect {
+  animation: pulse-shadow 2s infinite;
+}
+
+@keyframes pulse-shadow {
+  0% { box-shadow: 0 0 0 0 rgba(18, 161, 107, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(18, 161, 107, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(18, 161, 107, 0); }
+}
+
+/* Comparisons */
+.comparison-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  background: #fff;
+  transition: 0.3s;
+  height: 100%;
+}
+
+.comparison-card.bad-card .card-header-status {
+  background-color: #fde8e8;
+  padding: 15px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 1px solid #fbd5d5;
+}
+
+.comparison-card.good-card .card-header-status {
+  background-color: #def7ec;
+  padding: 15px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 1px solid #bcf0da;
+}
+
+.comparison-card.featured {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 2px solid #12a16b;
+}
+
+.comparison-card .card-body {
+  padding: 25px;
+}
+
+.comparison-card ul li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+/* Pricing Cards Redesign */
+.pricing-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: 0.3s;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card.popular {
+  border: 2px solid #12a16b;
+  transform: translateY(-10px);
+}
+
+.pricing-card .popular-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #12a16b;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.pricing-card .plan-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0a3223;
+  margin-bottom: 15px;
+}
+
+.pricing-card .price {
+  margin-bottom: 20px;
+  color: #12a16b;
+}
+
+.pricing-card .price .amount {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.pricing-card .price .period {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.pricing-card .plan-features {
+  flex-grow: 1;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-bottom: 25px;
+}
+
+.pricing-card .plan-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-card .plan-features ul li {
+  margin-bottom: 12px;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pricing-card .plan-features ul li i {
+  color: #12a16b;
+  font-size: 1.1rem;
+}
+
+.pricing-card .btn-select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #12a16b;
+  color: #12a16b;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.pricing-card .btn-select:hover {
+  background: #12a16b;
+  color: #fff;
+}
+
+.pricing-card.popular .btn-select {
+  background: #12a16b;
+  color: #fff;
+}
+
+.pricing-card.popular .btn-select:hover {
+  background: #0a7d51;
+}
+
+.pricing-card.horizontal-card {
+  text-align: right;
+  border: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+  .pricing-card.horizontal-card {
+    text-align: center;
+  }
+}
+
+/* Specific Mobile Tweaks for 2-Column Layout */
+@media (max-width: 575px) {
+  .pricing-card {
+    padding: 15px 10px;
+    border-radius: 12px;
+  }
+  
+  .pricing-card.popular {
+    transform: translateY(0); /* Remove offset on mobile */
+  }
+
+  .pricing-card .plan-header h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    min-height: 40px; /* Align heights */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pricing-card .price {
+    margin-bottom: 10px;
+  }
+  
+  .pricing-card .price .amount {
+    font-size: 1.8rem;
+  }
+
+  .pricing-card .price .period {
+    display: block;
+    font-size: 0.75rem;
+  }
+
+  .pricing-card .plan-features {
+    padding-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .pricing-card .plan-features ul li {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .pricing-card .btn-select {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+}
+
