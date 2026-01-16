@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /video-guides.html
+Disallow: /dns-config.html
+Disallow: /privacy.html
 Sitemap: https://enjaz.app/sitemap.xml
