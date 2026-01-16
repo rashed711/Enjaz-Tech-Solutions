@@ -271,23 +271,28 @@
                     <div class="row d-flex justify-content-center text-center">
                         <div class="col-lg-8">
                             <h1 data-i18n="dns_config_title">إعدادات DNS</h1>
-                            <p>Enjaz Smart Solutions - Technical Support</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <nav class="breadcrumbs">
-                <div class="container">
-                    <ol>
-                        <li><a href="index.html" data-i18n="nav_home">الرئيسية</a></li>
-                        <li class="current" data-i18n="dns_config_breadcrumb">DNS Configuration</li>
-                    </ol>
-                </div>
-            </nav>
         </div><!-- End Page Title -->
 
         <section class="dns-section section light-background">
             <div class="container">
+
+                <!-- Domain Input Section -->
+                <div class="row mb-4 justify-content-center">
+                    <div class="col-md-8">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-end-0"><i class="bi bi-globe"></i></span>
+                            <input type="text" id="domainInput" class="form-control border-start-0"
+                                placeholder="Enter your domain name (e.g. example.com)"
+                                data-i18n="[placeholder]dns_domain_input_placeholder">
+                            <button class="btn btn-primary" type="button" id="updateBtn" onclick="updateDnsValues()"
+                                data-i18n="dns_update_btn">Update Settings</button>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="dns-card-wrapper">
                     <div class="table-responsive">
@@ -337,9 +342,10 @@
                                     </td>
                                     <td data-label="VALUE" data-i18n="[data-label]dns_table_header_value">
                                         <div class="value-container">
-                                            <span class="code-text">yourdomain.com</span>
-                                            <button class="copy-btn" onclick="copyToClipboard('yourdomain.com', this)"
-                                                title="نسخ" data-i18n="[title]dns_copy_btn">
+                                            <span class="code-text" id="val-cname">yourdomain.com</span>
+                                            <button class="copy-btn" id="btn-cname"
+                                                onclick="copyToClipboard('yourdomain.com', this)" title="نسخ"
+                                                data-i18n="[title]dns_copy_btn">
                                                 <i class="bi bi-clipboard"></i>
                                             </button>
                                         </div>
@@ -452,8 +458,9 @@
                                     </td>
                                     <td data-label="VALUE" data-i18n="[data-label]dns_table_header_value">
                                         <div class="value-container">
-                                            <span class="code-text">mail.yourdomain.com (Priority: 10)</span>
-                                            <button class="copy-btn"
+                                            <span class="code-text" id="val-mx">mail.yourdomain.com (Priority:
+                                                10)</span>
+                                            <button class="copy-btn" id="btn-mx"
                                                 onclick="copyToClipboard('mail.yourdomain.com', this)" title="نسخ"
                                                 data-i18n="[title]dns_copy_btn">
                                                 <i class="bi bi-clipboard"></i>
@@ -662,39 +669,86 @@
     <div id="copyTooltip" class="copy-tooltip" data-i18n="dns_copy_tooltip">تم النسخ!</div>
 
     <script>
-        function copyToClipboard(text, btnElement) {
-            navigator.clipboard.writeText(text).then(function () {
-                // Visual feedback
-                const originalIcon = btnElement.innerHTML;
-                btnElement.innerHTML = '<i class="bi bi-check-lg"></i>';
-                btnElement.style.background = '#198754';
-                btnElement.style.borderColor = '#198754';
-                btnElement.style.color = '#fff';
+        function copyToClipboard(text, btn) {
+            navigator.clipboard.writeText(text).then(() => {
+                const icon = btn.querySelector('i');
+                const originalClass = icon.className;
+
+                // Change icon to check
+                icon.className = 'bi bi-check-lg';
+                btn.classList.add('btn-success');
+                btn.style.color = 'white';
 
                 // Show tooltip
-                const tooltip = document.getElementById('copyTooltip');
-                const rect = btnElement.getBoundingClientRect();
+                const tooltip = document.createElement('div');
+                tooltip.className = 'copy-tooltip show';
+                const lang = localStorage.getItem('language') || 'en';
+                tooltip.textContent = lang === 'ar' ? 'تم النسخ!' : 'Copied!';
 
+                // Position tooltip
+                const rect = btn.getBoundingClientRect();
                 tooltip.style.left = rect.left + 'px';
                 tooltip.style.top = (rect.top - 40) + 'px';
-                tooltip.classList.add('show');
 
-                // Reset after delay
-                setTimeout(function () {
-                    btnElement.innerHTML = originalIcon;
-                    btnElement.style.background = '';
-                    btnElement.style.borderColor = '';
-                    btnElement.style.color = '';
+                document.body.appendChild(tooltip);
 
-                    tooltip.classList.remove('show');
+                setTimeout(() => {
+                    icon.className = originalClass;
+                    btn.classList.remove('btn-success');
+                    btn.style.color = '';
+                    tooltip.remove();
                 }, 2000);
-
-            }, function (err) {
-                console.error('Async: Could not copy text: ', err);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
             });
         }
-    </script>
 
+        function updateDnsValues() {
+            const domainInput = document.getElementById('domainInput').value.trim();
+            const cnameVal = document.getElementById('val-cname');
+            const mxVal = document.getElementById('val-mx');
+            const cnameBtn = document.getElementById('btn-cname');
+            const mxBtn = document.getElementById('btn-mx');
+            const updateBtn = document.getElementById('updateBtn');
+            const lang = localStorage.getItem('language') || 'en';
+
+            if (!domainInput) {
+                // Shake animation or alert
+                document.getElementById('domainInput').style.borderColor = 'red';
+                setTimeout(() => { document.getElementById('domainInput').style.borderColor = ''; }, 2000);
+                return;
+            }
+
+            // Update CNAME
+            cnameVal.innerText = domainInput;
+            cnameBtn.setAttribute('onclick', `copyToClipboard('${domainInput}', this)`);
+
+            // Update MX
+            const mxText = `mail.${domainInput}`;
+            mxVal.innerText = `${mxText} (Priority: 10)`;
+            mxBtn.setAttribute('onclick', `copyToClipboard('${mxText}', this)`);
+
+            // Visual feedback
+            const originalText = updateBtn.getAttribute('data-i18n') ? (lang === 'ar' ? 'تحديث الإعدادات' : 'Update Settings') : updateBtn.innerText;
+
+            updateBtn.innerHTML = lang === 'ar' ? '<i class="bi bi-check-circle"></i> تم التحديث' : '<i class="bi bi-check-circle"></i> Updated';
+            updateBtn.classList.replace('btn-primary', 'btn-success');
+
+            setTimeout(() => {
+                updateBtn.innerText = originalText;
+                // re-apply translation if needed, but innerText reset is usually enough for temporary feedback
+                // Actually better to just reload the translation key logic if strict, but this is fine.
+                const key = updateBtn.getAttribute('data-i18n'); // dns_update_btn
+                // We rely on the fact that we set it back.
+                if (key) {
+                    // small hack to re-trigger i18n logic if we had access to it, 
+                    // but simple text restore is fine here.
+                    updateBtn.innerText = lang === 'ar' ? 'تحديث الإعدادات' : 'Update Settings';
+                }
+                updateBtn.classList.replace('btn-success', 'btn-primary');
+            }, 2000);
+        }
+    </script>
 </body>
 
 </html>

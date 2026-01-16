@@ -384,5 +384,8 @@
   "dns_table_header_type": "النوع (TYPE)",
   "dns_table_header_name": "الاسم (NAME / HOST)",
   "dns_table_header_value": "القيمة (VALUE)",
-  "dns_copy_tooltip": "تم النسخ!"
+  "dns_copy_tooltip": "تم النسخ!",
+  "dns_copy_btn": "نسخ القيمة",
+  "dns_domain_input_placeholder": "أدخل اسم النطاق الخاص بك (مثال: example.com)",
+  "dns_update_btn": "تحديث الإعدادات"
 }

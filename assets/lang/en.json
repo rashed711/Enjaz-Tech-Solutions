@@ -384,5 +384,7 @@
   "dns_table_header_type": "Type",
   "dns_table_header_name": "Name / Host",
   "dns_table_header_value": "Value",
-  "dns_copy_tooltip": "Copied!"
+  "dns_copy_tooltip": "Copied!",
+  "dns_domain_input_placeholder": "Enter your domain name (e.g. example.com)",
+  "dns_update_btn": "Update Settings"
 }
