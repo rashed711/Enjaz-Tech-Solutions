@@ -386,5 +386,18 @@
   "dns_table_header_value": "Value",
   "dns_copy_tooltip": "Copied!",
   "dns_domain_input_placeholder": "Enter your domain name (e.g. example.com)",
-  "dns_update_btn": "Update Settings"
+  "dns_update_btn": "Update Settings",
+  "portfolio_tag_design_dev": "Design & Development",
+  "portfolio_tag_audio_streaming": "Audio Streaming",
+  "portfolio_tag_email_hosting": "Email Hosting",
+  "portfolio_tag_tech_solutions": "Tech Solutions",
+  "portfolio_tag_saas": "SaaS",
+  "portfolio_tag_corporate_site": "Corporate Website",
+  "portfolio_tag_luxury_design": "Luxury Design",
+  "portfolio_tag_ecommerce": "E-Commerce",
+  "portfolio_tag_digital_marketing": "Digital Marketing",
+  "portfolio_tag_lifestyle": "Lifestyle",
+  "portfolio_tag_blog": "Blog",
+  "portfolio_visit_site": "Visit Website",
+  "project_mishal_title": "Mishal Law Firm"
 }

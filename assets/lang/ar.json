@@ -387,5 +387,18 @@
   "dns_copy_tooltip": "تم النسخ!",
   "dns_copy_btn": "نسخ القيمة",
   "dns_domain_input_placeholder": "أدخل اسم النطاق الخاص بك (مثال: example.com)",
-  "dns_update_btn": "تحديث الإعدادات"
+  "dns_update_btn": "تحديث الإعدادات",
+  "portfolio_tag_design_dev": "تصميم وتطوير",
+  "portfolio_tag_audio_streaming": "بث صوتي",
+  "portfolio_tag_email_hosting": "استضافة بريد إلكتروني",
+  "portfolio_tag_tech_solutions": "حلول تقنية",
+  "portfolio_tag_saas": "SaaS",
+  "portfolio_tag_corporate_site": "موقع تعريفي",
+  "portfolio_tag_luxury_design": "تصميم فاخر",
+  "portfolio_tag_ecommerce": "متجر إلكتروني",
+  "portfolio_tag_digital_marketing": "تسويق رقمي",
+  "portfolio_tag_lifestyle": "لايف ستايل",
+  "portfolio_tag_blog": "مدونة",
+  "portfolio_visit_site": "زيارة الموقع",
+  "project_mishal_title": "مكتب مشعل للمحاماة"
 }
