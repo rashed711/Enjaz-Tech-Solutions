@@ -378,5 +378,11 @@
   "pricing_feature_high_speed": "أداء عالي السرعة",
   "pricing_feature_free_transfer": "نقل مجاني",
   "pricing_feature_vps": "سيرفر خاص VPS",
-  "pricing_feature_account_manager": "مدير حساب"
+  "pricing_feature_account_manager": "مدير حساب",
+  "dns_config_title": "إعدادات DNS",
+  "dns_config_breadcrumb": "إعدادات DNS",
+  "dns_table_header_type": "النوع (TYPE)",
+  "dns_table_header_name": "الاسم (NAME / HOST)",
+  "dns_table_header_value": "القيمة (VALUE)",
+  "dns_copy_tooltip": "تم النسخ!"
 }

@@ -378,5 +378,11 @@
   "pricing_feature_high_speed": "High Speed Performance",
   "pricing_feature_free_transfer": "Free Transfer",
   "pricing_feature_vps": "Private VPS Server",
-  "pricing_feature_account_manager": "Account Manager"
+  "pricing_feature_account_manager": "Account Manager",
+  "dns_config_title": "DNS Configuration",
+  "dns_config_breadcrumb": "DNS Configuration",
+  "dns_table_header_type": "Type",
+  "dns_table_header_name": "Name / Host",
+  "dns_table_header_value": "Value",
+  "dns_copy_tooltip": "Copied!"
 }
